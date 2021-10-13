@@ -1,0 +1,309 @@
+\DeclareMathOperator{\Part}{Part}
+\DeclareMathOperator{\fin}{fin}
+
+%%%% Legendre-Symbol
+\makeatletter
+\newcommand{\LegendreGap}[2]{%
+  \mathchoice
+  {{\sbox0{$\genfrac{}{}{0pt}{0}{#1}{#2}$}%
+      \vphantom{\copy0}\ooalign{\hidewidth%
+        $\vcenter{\moveright\nulldelimiterspace %
+          \hbox to\wd0{\hbox{\vrule height 0.4pt width 0.5\wd0\kern 2pt\vrule height 0.4pt width 0.5\wd0}}%
+        }$
+        \hidewidth\cr $\genfrac{(}{)}{0pt}{0}{#1}{#2}$\cr}}}
+  {{\sbox0{$\genfrac{}{}{0pt}{1}{#1}{#2}$}%
+      \vphantom{\copy0}\ooalign{\hidewidth%
+        $\vcenter{\moveright\nulldelimiterspace %
+          \hbox to\wd0{\hbox{\vrule height 0.4pt width 0.5\wd0\kern 2pt\vrule height 0.4pt width 0.5\wd0}}%
+        }$
+        \hidewidth\cr $\genfrac{(}{)}{0pt}{1}{#1}{#2}$\cr}}}
+  {{\sbox0{$\genfrac{}{}{0pt}{2}{#1}{#2}$}%
+      \vphantom{\copy0}\ooalign{\hidewidth%
+        $\vcenter{\moveright\nulldelimiterspace %
+          \hbox to\wd0{\hbox{\vrule height 0.4pt width 0.5\wd0\kern 2pt\vrule height 0.4pt width 0.5\wd0}}%
+        }$
+        \hidewidth\cr $\genfrac{(}{)}{0pt}{2}{#1}{#2}$\cr}}}
+  {{\sbox0{$\genfrac{}{}{0pt}{3}{#1}{#2}$}%
+      \vphantom{\copy0}\ooalign{\hidewidth%
+        $\vcenter{\moveright\nulldelimiterspace %
+          \hbox to\wd0{\hbox{\vrule height 0.4pt width 0.5\wd0\kern 2pt\vrule height 0.4pt width 0.5\wd0}}%
+        }$
+        \hidewidth\cr$\genfrac{(}{)}{0pt}{3}{#1}{#2}$\cr}}}
+}
+
+\newcommand{\Legendre}[2]{
+  \mathchoice{\genfrac{(}{)}{0.4pt}{0}{#1}{#2}}
+  {\genfrac{(}{)}{0.4pt}{1}{#1}{#2}}
+  {\genfrac{(}{)}{0.4pt}{2}{#1}{#2}}
+  {\genfrac{(}{)}{0.4pt}{3}{#1}{#2}}
+}
+
+\makeatother
+%%%%
+
+
+
+
+\newcommand{\field}{\mathbb{F}}
+\newcommand{\mmod}{\ \mathrm{mod}\ }
+\newcommand{\boldone}{\mathbf{1}}
+
+\DeclareMathOperator{\PW}{PW}
+\DeclareMathOperator{\PWM}{PWM}
+\DeclareMathOperator{\ggT}{ggT}
+\DeclareMathOperator{\kgV}{kgV}
+\newcommand{\Primes}{\mathbb{P}}
+\newcommand{\setmid}{\;:\;}
+\DeclareMathOperator{\Primlength}{PL}
+
+\DeclareMathOperator{\base}{base}
+\newcommand{\homsp}{\mathcal X}
+\DeclareMathOperator{\Li}{Li}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\WF}{WF}
+\newcommand{\bT}{\mathbf T}
+\DeclareMathOperator{\Gen}{Gen}
+\newcommand{\redu}{\text{red}}
+% orbifolds
+
+\DeclareMathOperator{\Eff}{Eff}
+\DeclareMathOperator{\germ}{germ}
+\DeclareMathOperator{\Germ}{Germ}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\cod}{cod}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\Emb}{Emb}
+\DeclareMathOperator{\Orbmap}{Orb}
+\newcommand{\pullback}[2]{\,{}_{#1}\!\!\times_{#2}}
+\DeclareMathOperator{\Agr}{Agr}
+
+% algebraische Strukturen
+
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Morph}{Morph}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Bil}{Bil}
+\DeclareMathOperator{\QF}{QF}
+\DeclareMathOperator{\Op}{Op}
+\DeclareMathOperator{\Object}{Ob}
+\DeclareMathOperator{\Spann}{Spann}
+\DeclareMathOperator{\spann}{span}
+\DeclareMathOperator{\ER}{ER}
+\DeclareMathOperator{\Rang}{Rang}
+\DeclareMathOperator{\Gal}{Gal}
+\newcommand{\vs}{\text{vs}}
+\newcommand{\Res}{\text{res}}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Lie}{Lie}
+
+%Standardmatrizen 
+
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\AGL}{AGL}
+\DeclareMathOperator{\Gl}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\PSL}{PSL}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\PU}{PU}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Sp}{Sp}
+\DeclareMathOperator{\PSp}{PSp}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\Orth}{O}
+\DeclareMathOperator{\Spin}{Spin}
+\DeclareMathOperator{\PGamma}{P\Gamma}
+
+\DeclareMathOperator{\diag}{diag}
+
+% Operatoren
+
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\Div}{div}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\sgn}{sgn}
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\Bild}{Bild}
+
+\DeclareMathOperator{\pr}{pr}
+\DeclareMathOperator{\res}{res}
+% besondere Matrizen
+
+\DeclareMathOperator{\red}{Red}
+\DeclareMathOperator{\I}{I}
+%\newcommand{\I}{\mathds{1}}
+
+
+% Lietheorie
+
+\DeclareMathOperator{\Exp}{Exp}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\AD}{\textbf{Ad}}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\fsl}{\mathfrak{sl}}
+
+% Wirkungen
+
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\VS}{VS}
+
+% Masse
+\DeclareMathOperator{\HB}{HB}
+\DeclareMathOperator{\cusp}{cusp}
+
+% symbolische Dynamik
+
+\DeclareMathOperator{\abs}{abs}
+\DeclareMathOperator{\Ext}{ext}
+\DeclareMathOperator{\Int}{int}
+\DeclareMathOperator{\height}{ht}
+\DeclareMathOperator{\cl}{cl}
+\DeclareMathOperator{\Cod}{Cod}
+\DeclareMathOperator{\NC}{NC}
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\MD}{MD}
+\DeclareMathOperator{\Prim}{P}
+\DeclareMathOperator{\Rel}{Rel}
+\DeclareMathOperator{\HT}{HT}
+\DeclareMathOperator{\vb}{vb}
+\DeclareMathOperator{\vc}{vc}
+\DeclareMathOperator{\bd}{bd}
+\DeclareMathOperator{\BS}{BS}
+\DeclareMathOperator{\CS}{CS}
+\DeclareMathOperator{\DS}{DS}
+\DeclareMathOperator{\IS}{IS}
+\DeclareMathOperator{\NIC}{NIC}
+\DeclareMathOperator{\Sides}{Sides}
+\DeclareMathOperator{\Seq}{Seq}
+\DeclareMathOperator{\cyl}{cyl}
+\DeclareMathOperator{\IN}{IN}
+\DeclareMathOperator{\sym}{sym}
+\DeclareMathOperator{\Per}{Per}
+\DeclareMathOperator{\ES}{ES}
+
+\newcommand{\hg}{\overline \h^g}
+\newcommand{\chg}{\cl_{\overline \h^g}}
+\newcommand{\bhg}{\partial_g}
+
+\newcommand{\dg}{\overline D^g}
+\newcommand{\fcs}{\CS'\hspace{-.9mm}\big(\wt\fch_{\choices,\shmap}\big)}
+
+\newcommand{\rueck}{\hspace{-.9mm}}
+
+\newcommand{\fd}{\mc F}
+\newcommand{\pch}{\mc A}
+\newcommand{\fpch}{\mathbb A}
+\newcommand{\ch}{\mc B}
+\newcommand{\fch}{\mathbb B}
+\newcommand{\choices}{\mathbb S}
+\newcommand{\shmap}{\mathbb T}
+\newcommand{\leer}{\Diamond}
+
+\newcommand{\rd}{\text{red}}
+\newcommand{\st}{\text{st}}
+\newcommand{\all}{\text{all}}
+\newcommand{\bk}{\text{bk}}
+\newcommand{\tw}{\text{tw}}
+\newcommand{\dec}{\text{dec}}
+\newcommand{\parab}{\text{par}}
+\newcommand{\dyn}{\text{dyn}}
+% Buchstaben
+
+\newcommand\F{\mathbb{F}}
+\newcommand\N{\mathbb{N}}
+\newcommand\Q{\mathbb{Q}}
+\newcommand\R{\mathbb{R}}
+\newcommand\Z{\mathbb{Z}}
+\newcommand\C{\mathbb{C}}
+\newcommand\dD{\mathbb{D}}
+\newcommand{\h}{\mathbb{H}}
+\newcommand{\mP}{\mathbb{P}}
+\newcommand\T{\mathbb{T}}
+
+\newcommand{\mc}[1]{\mathcal #1}
+\newcommand{\mf}[1]{\mathfrak #1}
+\newcommand{\mb}[1]{\mathbb #1}
+\newcommand{\mft}[2]{\mathfrak #1\mathfrak #2}
+\newcommand{\wt}{\widetilde}
+\newcommand{\wh}{\widehat}
+
+\newcommand{\eps}{\varepsilon}
+\newcommand\gG{\Gamma}
+\newcommand\gd{\delta}
+
+
+% speziell fuer SL2R
+\DeclareMathOperator{\Pe}{P}
+\DeclareMathOperator{\spec}{spec}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\lsp}{lsp}
+\DeclareMathOperator{\grp}{grp}
+\DeclareMathOperator{\dvol}{dvol}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Orb}{\mc O}
+\DeclareMathOperator{\mult}{mult}
+\DeclareMathOperator{\Arcosh}{Arcosh}
+\DeclareMathOperator{\arccot}{arccot}
+
+
+
+% Koecher
+
+\DeclareMathOperator{\RMod}{R-mod}
+\DeclareMathOperator{\Ob}{Ob}
+
+% FT
+\DeclareMathOperator{\ind}{ind}
+
+%BLZ
+\DeclareMathOperator{\FE}{FE}
+
+% Sonstiges
+
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\M}{M}
+\DeclareMathOperator{\Graph}{graph}
+\DeclareMathOperator{\Fct}{Fct}
+\DeclareMathOperator{\MCF}{MCF}
+\DeclareMathOperator{\vN}{vN}
+
+\DeclareMathOperator{\esssup}{ess\,sup}
+
+\newcommand{\sceq}{\mathrel{\mathop:}=}
+\newcommand{\seqc}{\mathrel{=\mkern-4.5mu{\mathop:}}}
+
+\newcommand{\mat}[4]{\begin{pmatrix} #1&#2\\#3&#4\end{pmatrix}}
+\newcommand{\bmat}[4]{\begin{bmatrix} #1&#2\\#3&#4\end{bmatrix}}
+\newcommand{\textmat}[4]{\left(\begin{smallmatrix} #1&#2 \\ #3&#4
+\end{smallmatrix}\right)}
+\newcommand{\textbmat}[4]{\left[\begin{smallmatrix} #1&#2 \\ #3&#4
+\end{smallmatrix}\right]}
+\newcommand{\vvek}[2]{\begin{pmatrix} #1 \\ #2 \end{pmatrix}}
+\newcommand{\hvek}[2]{\begin{pmatrix} #1 & #2 \end{pmatrix}}
+
+\newcommand\ie{\mbox{i.\,e., }}
+\newcommand\eg{\mbox{e.\,g., }}
+\newcommand\wrt{\mbox{w.\,r.\,t.\@ }}
+\newcommand\Wlog{\mbox{w.\,l.\,o.\,g.\@ }}
+\newcommand\resp{\mbox{resp.\@}}
+
+\newcommand\abstand{\vspace{0.5cm}}
+\newcommand\negab{\vspace{-0.5cm}}
+
+\DeclareMathOperator{\ggt}{ggt}
+
+\newcommand\mminus{\!\smallsetminus\!}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

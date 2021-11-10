@@ -58,8 +58,7 @@ ist ein K\"orper. Gibt es eine Anordnung (mit Beweis!)?
 
 
 \begin{aufg}[6 Punkte]
-Beweisen Sie die folgenden Identit\"aten f\"ur $a,b,c,d \in
-Z$, $b\neq 0$, $d\neq 0$ 
+Beweisen Sie die folgenden Identit\"aten f\"ur $a,b,c,d \in Z$, $b\neq 0$, $d\neq 0$ 
 \begin{enumerate}[label=$\mathrm{(\roman*)}$, ref=$\mathrm{\roman*}$]
 \item $\frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}$, 
 \item $\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{ad}{bc}$ f\"ur $c\not=0$,
@@ -69,23 +68,41 @@ Z$, $b\neq 0$, $d\neq 0$
 
 \bigskip
 
+\begin{comment}
 \newcommand\Asseq{\stackrel{\mathclap{\normalfont\fontsize{4}\mbox{Ass.}}}{=}}
 \newcommand\KommAsseq{\stackrel{\mathclap{\normalfont\fontsize{4}\mbox{Komm. & Ass.}}}{=}}
 \newcommand\Defeq{\stackrel{\mathclap{\normalfont\fontsize{4}\mbox{Def. Quotient}}}{=}}
 \newcommand\ieq{\stackrel{\mathclap{\normalfont\fontsize{4}\mbox{(i)}}}{=}}
-\begin{lsg}
-Neila Fettous und Manuel Dammert\smallskip
-\begin {enumerate}[label=$\mathrm{(\roman*)}$, ref=$\mathrm{\roman*}$]
-\item z.Z: $\frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}$\\
-$(bd) \cdot x = ac$, x = $\frac{ac}{bd}$ löst nach Def. des Quotienten die Gleichung.
-$\frac{a}{b} \cdot \frac{c}{d}$ löst auch, denn\\ $(bd) \cdot (\frac{a}{b} \cdot \frac{c}{d}) \Asseq bd \cdot \frac{a}{b} \cdot \KommAsseq (b \frac{a}{b}) \cdot (d\frac{c}{d}) \Defeq ac$ \hfill $\square$ \smallskip
-\item z.Z: $\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{ad}{bc}$ f\"ur $c\not=0$\\
-$(\frac{c}{d} \cdot x = \frac{a}{b}$, x = $\frac{\frac{a}{b}}{\frac{c}{d}}$ löst nach Def. des Quotienten die Gleichung. $\frac{ac}{bd}$ löst auch, denn\\
-$(\frac{c}{d}) \cdot (\frac{ad}{bc}) \Asseq \frac{c}{d} \cdot \frac{ad}{bd} \ieq \frac{a}{b}$ \hfill $\square$ \smallskip
-\item z.Z: $c\frac{a}{b} = \frac{ca}{b}$\\
-$b \cdot x = ca$, $x = \frac{ca}{b}$ löst per Def. des Quotienten die Gleichung, $c\frac{a}{b}$ löst auch, denn\\ $b \cdot (c\frac{a}{b}) \Asseq b \cdot c \cdot \frac{a}{b} \KommAsseq c \cdot (b \cdot \frac{a}{b} \Defeq ca$ \hfill $\square$
+\end{comment}
 
-\end {enumerate}
+
+\newcommand\Asseq{\stackrel{\text{Ass.}}{=}}
+\newcommand\KommAsseq{\stackrel{\text{Komm. \& Ass.}}{=}}
+\newcommand\Defeq{\stackrel{\text{Def. Quotient}}{=}}
+\newcommand\ieq{\stackrel{\text{(i)}}{=}}
+
+\begin{lsg}[Neila Fettous und Manuel Dammert]
+\begin{enumerate}[label=$\mathrm{(\roman*)}$, ref=$\mathrm{\roman*}$]
+\item z.Z: $\frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}$\\
+$(bd) \cdot x = ac$, x = $\frac{ac}{bd}$ l\"ost nach Def. des Quotienten die Gleichung.
+$\frac{a}{b} \cdot \frac{c}{d}$ l\"ost auch, denn 
+\[
+(bd) \cdot (\frac{a}{b} \cdot \frac{c}{d}) \Asseq 
+bd \cdot \frac{a}{b} \cdot \KommAsseq (b \frac{a}{b}) \cdot (d\frac{c}{d}) \Defeq ac \qed
+\]
+\item z.Z: $\frac{\frac{a}{b}}{\frac{c}{d}} = \frac{ad}{bc}$ f\"ur $c\not=0$\\
+$(\frac{c}{d} \cdot x = \frac{a}{b}$, $x = \frac{\frac{a}{b}}{\frac{c}{d}}$ l\"ost nach Def. des Quotienten die Gleichung. $\frac{ac}{bd}$ l\"ost auch, denn
+\[
+(\frac{c}{d}) \cdot (\frac{ad}{bc}) \Asseq 
+\frac{c}{d} \cdot \frac{ad}{bd} \ieq \frac{a}{b} \qed
+\]
+\item z.Z: $c\frac{a}{b} = \frac{ca}{b}$\\
+$b \cdot x = ca$, $x = \frac{ca}{b}$ l\"ost per Def. des Quotienten die Gleichung, $c\frac{a}{b}$ l\"ost auch, denn
+\[
+b \cdot (c\frac{a}{b}) \Asseq 
+b \cdot c \cdot \frac{a}{b} \KommAsseq c \cdot (b \cdot \frac{a}{b} \Defeq ca \qed
+\]
+\end{enumerate}
 \end{lsg}
 
 \bigskip
@@ -103,17 +120,17 @@ $b \cdot x = ca$, $x = \frac{ca}{b}$ löst per Def. des Quotienten die Gleichung
 \begin{lsg}\mbox{ }
 \item [Pia Blanke, Pia Hovemann]
 \begin{enumerate}[label=$\mathrm{(\roman*)}$, ref=$\mathrm{\roman*}$]
-\item ges.: Der Unterschied zwischen \R und \Q
-\Q  ist die Menge aller rationalen Zahlen und enthält alle positiven und negativen Brüche, abbrechende Dezimalbrüche und periodische Dezimalbrüche.
-\R ist die Menge der reellen Zahlen und beinhaltet die rationalen Zahlen, sowie die irrationalen Zahlen.
-Der Unterschied zwischen den beiden Mengen liegt also darin, dass \R zusätzlich zu allen Elementen aus \Q auch irrationalen Zahlen wir Wurzeln enthält.
+\item ges.: Der Unterschied zwischen $\R$ und $\Q$ 
+$\Q$  ist die Menge aller rationalen Zahlen und enth\"alt alle positiven und negativen Br\"uche, abbrechende Dezimalbr\"uche und periodische Dezimalbr\"uche.
+$\R$ ist die Menge der reellen Zahlen und beinhaltet die rationalen Zahlen, sowie die irrationalen Zahlen.
+Der Unterschied zwischen den beiden Mengen liegt also darin, dass $\R$ zus\"atzlich zu allen Elementen aus $\Q$  auch irrationalen Zahlen wir Wurzeln enth\"alt.
 %
-\item zz.: Erfüllt die Zubereitung der klassischen Mousse au Chocolat das Assoziativitätsaxiom?
-Klassische Mousse au Chocolat besteht in der Regel aus geschmolzener dunkler Schokolade, Eiern (wobei Eiweiß und Eigelb getrennt voneinander verarbeitet werden) und Puderzucker. Die Mengen sind zur Beantwortung der Frage unerheblich und werden deswegen hier nicht explizit benannt.
-Bei der Zubereitung werden zunächst die Schokolade temperiert, dann die Eigelbe aufgeschlagen und die Eiweiß zu Eischnee verarbeitet. Der Puderzucker wird zum Eischnee hinzugefügt, wenn dieser die richtige Konsistenz erreicht hat, da der Eischnee auf diese Weise fixiert werden kann. Hier wird also schon erkenntlich, dass es einen Unterschied macht, wenn der Puderzucker zu einem anderen Zeitpunkt eingesetzt/hinzugefügt wird. 
-Zusätzlich ist es wichtig, dass die Eigelbe unter den Eischnee gehoben werden, bevor die Schokoladenmasse darunter gemischt wird, um die Leichtigkeit zu erhalten. Die Eigelbe direkt unter die Schokolade zu rühren, würde zu einer erheblichen Verfestigung der Masse führen, was nicht dem luftigen Dessert entsprechen würde, dass Mousse au Chocolat sein soll.
-Es gilt also mit den Variablen Schokolade \coloneqq S, Eigelb \coloneqq E$_{g}$ , und mit Puderzucker vermischter Eischnee \coloneqq E$_{p}$
-(E$_{p}$ + E$_{g}$) + S $\neq$ E$_{p}$ + (E$_{g}$ + S)
-Das Assoziativitätsaxiom gilt bei der Zubereitung von Mousse au Chocolat nicht.
+\item zz.: Erf\"ullt die Zubereitung der klassischen Mousse au Chocolat das Assoziativit\"atsaxiom?
+Klassische Mousse au Chocolat besteht in der Regel aus geschmolzener dunkler Schokolade, Eiern (wobei Eiwei{\"ss} und Eigelb getrennt voneinander verarbeitet werden) und Puderzucker. Die Mengen sind zur Beantwortung der Frage unerheblich und werden deswegen hier nicht explizit benannt.
+Bei der Zubereitung werden zun\"achst die Schokolade temperiert, dann die Eigelbe aufgeschlagen und die Eiwei{\"ss} zu Eischnee verarbeitet. Der Puderzucker wird zum Eischnee hinzugef\"ugt, wenn dieser die richtige Konsistenz erreicht hat, da der Eischnee auf diese Weise fixiert werden kann. Hier wird also schon erkenntlich, dass es einen Unterschied macht, wenn der Puderzucker zu einem anderen Zeitpunkt eingesetzt/hinzugef\"ugt wird. 
+Zus\"atzlich ist es wichtig, dass die Eigelbe unter den Eischnee gehoben werden, bevor die Schokoladenmasse darunter gemischt wird, um die Leichtigkeit zu erhalten. Die Eigelbe direkt unter die Schokolade zu r\"uhren, w\"urde zu einer erheblichen Verfestigung der Masse f\"uhren, was nicht dem luftigen Dessert entsprechen w\"urde, dass Mousse au Chocolat sein soll.
+Es gilt also mit den Variablen Schokolade $\coloneqq S$, Eigelb $\coloneqq E_{g}$ , und mit Puderzucker vermischter Eischnee $\coloneqq E_{p}$
+$(E_{p} + E_{g}) + S \neq E_{p} + (E_{g} + S)$
+Das Assoziativit\"atsaxiom gilt bei der Zubereitung von Mousse au Chocolat nicht.
 \end{enumerate}
 \end{lsg}

@@ -93,9 +93,65 @@ Bestimme die gr\"o{\ss}te untere und die kleinste obere Schranke der folgenden M
 \bigskip
 
 \begin{lsg}
+Dennis Oestmann und Tobias Rauer
 \begin{enumerate}[label=$\mathrm{(\roman*)}$, ref=$\mathrm{\roman*}$]
 \item 
+Vermutung: sup$(X)=1$
+\begin{proof}
+Annahme: $\exists x \in X:x>1$. Daraus folgt:
+\begin{align*}
+&x&&>1 \\
+\iff &\frac{1}{n}&&>1 \\
+\iff &1&&>n 
+\end{align*}  
+Da keine natürliche Zahl $n<1$ existiert, ist die Annahme widersprüchlich und $1$ ist eine obere Schranke.
+
+Es gilt zudem: $1=\frac{1}{1}\in X$. Da daher jede potenzielle kleinere obere Schranke für $X$ kleiner als $1$, und damit kleiner als ein Element von $X$ wäre, ist 1 zudem die kleinste obere Schranke.
+\end{proof}
+
+Vermutung: inf$(X)=0$
+\begin{proof}
+0 ist eine untere Schranke, da es keine $n \in \N$ gibt, die kleiner als 0 sind, womit auch $\frac{1}{n} \geq 0$ gilt.
+
+Annahme: Es gibt eine untere Schranke für $X$, die größer als 0 ist. Diese Schranke sei $w$ mit $w>0$. Da $w$ eine untere Schranke ist, gilt $\forall n\in \N: w \leq \frac{1}{n}$. Da $w>0$ gilt, folgt:
+\begin{align*}
+&w &&\leq \frac{1}{n} \\
+\iff &wn &&\leq 1 \\
+\iff &n &&\leq \frac{1}{w} 
+\end{align*}
+Daraus folgt, dass die Menge der natürlichen Zahlen durch $\frac{1}{w}$ nach oben beschränkt ist.
+Da $\N \subseteq \R$, gilt nach dem Vollständigkeitsaxiom, dass $\N$ damit auch ein Supremum haben muss. Dieses sei $S$. Es ergibt sich, dass es ein $m \in \N$ geben muss, dass zwischen $S$ und $S-1$ liegt. (Wäre $m>S$, dann wäre $S$ keine obere Schranke, und wäre $m<S-1$, dann wäre $S-1$ eine kleinere Schranke als $S$; $S$ also kein Supremum).
+
+Es gilt also:
+\begin{align*}
+&S-1&&<m \\
+\iff &S&&<m+1 
+\end{align*}
+$m+1$ ist aber laut Definition auch eine natürliche Zahl. Damit gibt es ein Element in $\N$, das größer ist als das Supremum. Das ist ein Widerspruch und die Annahme muss falsch sein. Die natürlichen Zahlen sind somit nach oben unbeschränkt, und es gibt keine untere Schranke für $X$, die größer als 0 ist. 
+\end{proof}
 \item 
+Vermutung: sup$(X)=1$
+\begin{proof}
+1 ist eine obere Schranke, da sich die Menge durch $x<1$ definiert.
+
+Annahme:Es gibt eine obere Schranke $w$ von $X$, die kleiner als 1 ist. Dann existiert ein beliebiges, aber festes $v\in \R$ so, dass gilt: $v>0 \land w=1-v<1$. 
+
+Nun existiert für jedes festes $v$ aber ein $1-\frac{v}{2}$. Dieses liegt in $\R$ und ist durch $v>0$ auch kleiner als 1. Daraus folgt, dass $1-\frac{v}{2}$ in $X$ liegt. Es gilt jedoch: $1-\frac{v}{2}>1-v$. Daher ist $1-v$ keine obere Schranke und die Annahme ist widersprüchlich. 1 ist also tatsächlich die kleinste obere Schranke von $X$.
+\end{proof}
+
+Vermutung: $X$ ist nach unten unbeschränkt.
+\begin{proof}
+$X$ ist eine Teilmenge von $\R$. Aus dem Vollständigkeitsaxiom folgt daher, dass wenn $X$ nach unten beschränkt ist, auch ein Infimum existiert. 
+
+Annahme: Es existiert ein solches Infimum, dieses sei $w$.
+
+Man betrachte $w+1$. Für $w+1$ gibt es eine Zahl $z \in X$, für die gilt: $z<w+1$. (Ansonsten wäre $w+1$ eine untere Schranke, die größer ist als $w$, und $w$ damit kein Infimum). Daraus folgt:
+\begin{align*}
+&z&&<w+1 \\
+\iff &z-1&&<w
+\end{align*} 
+Aus $z\in X$ und damit $z<1$ folgt aber, dass $z-1<1$ und damit $(z-1) \in X$. Da somit ein Element in $X$ existiert, das kleiner als $w$ ist, ist $w$ kein Infimum und die Annahme ist widersprüchlich. $X$ ist also tatsächlich nach unten unbeschränkt.
+\end{proof}
 \end{enumerate}
 \end{lsg}
 

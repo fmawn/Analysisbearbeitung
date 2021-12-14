@@ -14,14 +14,61 @@ Beweise die folgenden Identit\"aten f\"ur $a,b,c,d \in Z$:
 \bigskip
 
 \begin{lsg}\mbox{ }
+[Leander Sims, Jütte Apel]
+Wir kürzen Kommutativität mit Ko. und Assoziativität mit As. ab.
 \begin{enumerate}[label=$\mathrm{(\roman*)}$, ref=$\mathrm{\roman*}$]
-\item 
-%
-\item 
-%
-\item 
-%
-\item 
+\item
+    Es ist $ a+(b-c) $ die eindeutige L\"osung von 
+    \[c+x =(a+b).\]
+    Wir zeigen, dass auch $(a+b)-c$ die Gleichung $c+x =a+b$ l\"ost.\\
+    Beweis:
+    \begin{align*}
+	    && \quad  c+((a+b)-c) \overset{\text{Ko.}}{=} & \quad ((a+b)-c)+c\\
+    	&&\overset{\text{2.8ii}}{=} & \quad ((a+b)+(-c))+c\\
+	    &&\overset{\text{As.}}{=} & \quad (a+b)+((-c)+c)\\
+	    &&\overset{\text{2.8i}}{=} & \quad (a+b)+0\\
+    	&&\overset{\text{2.4}}{=} & \quad (a+b)
+\end{align*}
+Wegen Eindeutigkeit gilt $(a+b)-c=a+(b-c)$.
+\item
+    Es ist $ -(b-a) $ die eindeutige L\"osung von 
+    \[b+x =a.\]
+	Wir zeigen, dass auch $(a-b)$ die Gleichung $b+x =a$ l\"ost.\\
+	Beweis:
+	\begin{align*}
+		&& \quad  b+(a-b)\overset{\text{Ko.}}{=}& \quad  (a-b)+b\\
+		&&\overset{\text{2.8ii}}{=} & \quad (a+(-b))+b\\
+		&&\overset{\text{As.}}{=} & \quad a+((-b)+b)\\
+		&&\overset{\text{2.8i}}{=} & \quad a +0\\
+		&&\overset{\text{2.4}}{=} & \quad a
+	\end{align*}
+	Wegen Eindeutigkeit gilt $-(b-a)=a-b$.
+\item
+    Es ist $a-(b-c)$ die eindeutige L\"osung von 
+	\[ b+x=(a+c). \]
+	Wir zeigen, dass auch $(a+c)-b$ die Gleichung $b+x=a+c$ l\"ost.\\
+	Beweis:
+	\begin{align*}
+		&& \quad b+((a+c)-b)\overset{\text{Ko.}}{=} & \quad ((a+c)-b)+b\\
+		&&\overset{\text{2.8ii}}{=} & \quad ((a+c)+(-b))+b\\
+		&&\overset{\text{As.}}{=} & \quad (a+c)+((-b)+b)\\
+		&&\overset{\text{2.8i}}{=} & \quad (a+c)+0\\
+		&&\overset{\text{2.4}}{=} & \quad (a+c)
+	\end{align*}\\
+	Wegen Eindeutigkeit gilt $a-(b-c)=(a+c)-b$.
+\item
+    Es ist $-(a+b)$ die eindeutige L\"osung von
+	\[b+x=(-a).\]
+	Wir zeigen, dass auch $ (-a-b) $ die Gleichung $b+x=(-a)$ l\"ost.\\
+	Beweis:
+	\begin{align*}
+		&&\quad b+(-a-b)\overset{\text{2.8ii}}{=} & \quad b+((-a)+(-b))\\
+		&&\overset{\text{Ko.}}{=} & \quad -b+((-b)+(-a))\\
+		&&\overset{\text{As.}}{=} & \quad (-b+(-b))+(-a)\\
+		&&\overset{\text{2.8i}}{=} & \quad 0+(-a)\\
+		&&\overset{\text{2.4}}{=} & \quad (-a)
+		\end{align*}
+	Wegen Eindeutigkeit gilt $-(a+b)=-a-b$.
 \end{enumerate}
 \end{lsg}
 

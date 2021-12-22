@@ -10,7 +10,22 @@ konvergiert. Konvergiert oder divergiert die Reihe?
 
 \bigskip
 
-\begin{lsg}
+\begin{lsg}[Carlotta Hohaus, Gina Walter]
+Wir teilen die \emph{unharmonische} Reihe auf und betrachten alle Summanden, die die gleiche Stellenanzahl im Nenner haben, zusammen.
+	Betrachtet man die Nenner mit \emph{n} Stellen, gibt es genau $9^{n}$ von diesen, da an jeder der \emph{n} Stellen genau $9$ Ziffern stehen können.
+	Jeder der n-stelligen Summanden ist nun auf jeden Fall kleiner $\frac{1}{10^{n-1}}$. Somit gilt für die \emph{unharmonische} Reihe folgendes:
+	\begin{align*}
+		U&<\sum\limits_{n=1}^\infty 9^{n}\frac{1}{10^{n-1}}\\
+		&=9\sum\limits_{n=1}^\infty 9^{n-1}\frac{1}{10^{n-1}}\\
+		&=9\sum\limits_{n=1}^\infty (\frac{9}{10})^{n-1}\\
+		&=9\sum\limits_{n=0}^\infty (\frac{9}{10})^{n}
+	 \end{align*}
+	Somit haben wir eine geometrische Reihe produziert. Die geometrische Reihe konvergiert, wenn die Basis kleiner als $1$ ist, was $\frac{9}{10}$ erfüllt.
+	Diese geometrische Reihe konvergiert gegen $\frac{1}{1-\frac{9}{10}}=\frac{1}{\frac{1}{10}}=10$ und somit ist
+	\begin{align*}
+		U<9*10=90
+	\end{align*}
+	Da U zusätzlich streng monoton wachsend, konvergiert die \emph{unharmonische} Reihe und somit wurde der Grinch bei seinem Vorhaben, die Welt ins Chaos zu st\"urzen, aufgehalten. 
 \end{lsg}
 
 

@@ -46,7 +46,42 @@ Warum ist die Voraussetzung $n\ge2$ erforderlich?
 
 \bigskip
 
-\begin{lsg}
+\begin{lsg} (Melia Keil, Leena Mädl)\\
+\\
+    \emph{Induktionsanfang}
+
+    Für $n=1$ gilt:
+    \begin{align*}
+        &&(1+x)^1&>1+1\cdot x\\
+        \iff &&1+x&>1+x\\
+    \end{align*}
+    $\Longrightarrow$ Hier liegt Gleichheit vor, kein echt größer bzw. kleiner.
+
+    Für $n=2$ gilt:
+    \begin{align*}
+        &&(1+x)^2&>1+2\cdot x\\
+        \iff &&1+2x+x^2&>1+2x\\
+        \iff &&x^2&>0
+    \end{align*}
+   Somit ist der Induktionsanfang 2 und nicht 1
+   \\ 
+    
+    \emph{Induktionsvorraussetzung}
+
+    Sei $(1+x)^n> 1+n\cdot x$ für $n=2$ erfüllt.\\
+    \\
+    \emph{Induktionsschritt von n auf n+1:}
+    \begin{align*}
+       \text{Z.z.} &&(1+x)^{n+1}&>1+(n+1)\cdot x\\
+        &&(1+x)^{n+1}&=(1+x)^n\cdot (1+x)\\
+        && &>(1+nx)\cdot(1+x)=1+nx+x+nx^2=1+(n+1)x+nx^2\\
+        && &>1+(n+1)x
+    \end{align*}
+    
+    $\Longrightarrow$ Die Aussage gilt für $n\geq2$, da für $n=1$ nur eine Gleichheit und kein echt größer besteht.
+    
+     $\Longrightarrow$ Aussage per vollständiger Induktion bewiesen.
+
 \end{lsg}
 
 

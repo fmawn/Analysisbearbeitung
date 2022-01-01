@@ -60,6 +60,73 @@ Zeigen Sie, dass die Folge $(x_n)_n$ konvergiert und bestimmen Sie ihren Grenzwe
 \bigskip
 
 \begin{lsg}  
+
+Vorgehensweise:
+\begin{enumerate}
+    \item Zeige, dass $x_2 > \sqrt{\alpha}$ für $x_1 \neq \sqrt{\alpha}$
+    \item Zeige, dass $x_n > \sqrt{\alpha}$ für $n \geq 2$
+    \item Zeige, dass $x_n$ monoton fällt für $n \geq 2$
+    \item $\lim x_n = \lim x_{n+1} = \sqrt{\alpha}$ ist Grenzwert
+\end{enumerate}
+
+Für $x_1$ gibt es die drei Möglichkeiten $x_1 = \sqrt{\alpha}$, $x_1 < \sqrt{\alpha}$, $x_1 > \sqrt{\alpha}$, aus denen jeweils $x_2 \geq \sqrt{\alpha}$ folgt:
+
+\noindent
+\underline{Fall 1:} 
+\begin{align*}
+x_1 &= \sqrt{\alpha} \\
+\Rightarrow x_2 &= \frac{1}{2} \left( \sqrt{\alpha} + \frac{\alpha}{\sqrt{\alpha}} \right) = \sqrt{\alpha}
+\end{align*}
+ also ist für $x_1 = \sqrt{\alpha}$ $x_n$ eine konstante Folge mit $x_n = \sqrt{\alpha}$.
+
+\noindent
+\underline{Fall 2:} $x_1 < \sqrt{\alpha} \Rightarrow x_1 = \sqrt{\alpha} - h_1$, wobei $h_1 > 0$ und $h_1 < \sqrt\alpha$
+\begin{align*}
+\Rightarrow x_2 &= \frac{1}{2} \left( \sqrt{\alpha} - h_1 + \frac{\alpha}{\sqrt{\alpha} - h_1} \right) \\
+\left(\text{mit} \frac{1}{\sqrt{\alpha} - h_1} > \frac{1}{\sqrt{\alpha}}\right)\quad \Rightarrow x_2 &> \frac{1}{2} \left( \sqrt{\alpha} - h_1 + \frac{\alpha}{\sqrt{\alpha}} \right) \\
+(\text{mit} -h_1 < 0)\quad \Rightarrow x_2 &> \frac{1}{2} \left( \sqrt{\alpha} + \frac{\alpha}{\sqrt{\alpha}} \right) = \sqrt{\alpha}
+\end{align*}
+
+
+\noindent
+\underline{Fall 3:} $x_1 > \sqrt{\alpha} \Rightarrow x_1 = \sqrt{\alpha} + h_1$, wobei $h_1 > 0$ und $h_1 < \sqrt\alpha$
+\begin{align*}
+\Rightarrow x_2 &= \frac{1}{2} \left( \sqrt{\alpha} + h_1 + \frac{\alpha}{\sqrt{\alpha} + h_1} \right) \\
+& = \frac{1}{2} \left(\frac{\left(\sqrt{\alpha} + h_1\right)^2}{\sqrt{\alpha} + h_1} + \frac{\alpha}{\sqrt{\alpha} + h_1} \right) \\
+&= \frac{1}{2} \left(\frac{\alpha + 2\sqrt{\alpha} h_1 + h_1^2 + \alpha}{\sqrt{\alpha} + h_1} \right) \\
+&= \frac{1}{2} \left(\frac{2\alpha + 2\sqrt{\alpha} h_1 + h_1^2}{\sqrt{\alpha} + h_1} \right) \\
+&= \frac{1}{2} 2\sqrt{\alpha} \frac{\sqrt{\alpha} + h_1 + \frac{h_1^2}{2\sqrt{\alpha}}}{\sqrt{\alpha} + h_1} \\
+&= \sqrt{\alpha} \left(1 + \frac{h_1^2}{2\sqrt{\alpha}\left(\sqrt{\alpha} + h_1\right)}\right) \\
+\Rightarrow x_2 &> \sqrt{\alpha}
+\end{align*}
+Betrachte nun beliebige $n \geq 2$. Per Induktion wird gezeigt, dass $x_n > \sqrt{\alpha}$ ist:
+\begin{align*}
+    \text{Induktionsanfang:}&\quad x_2 > \sqrt{\alpha} \quad(\text{ist erfüllt, siehe oben}) \\
+    \text{Induktionsvoraussetzung:} & \quad \text{für ein festes, beliebiges $n \in \mathbb{N}$, $n \geq$ gilt:}\, x_n = \sqrt{\alpha} + h_n (h_n > 0) \\
+    \text{Induktionsschritt:}&\quad x_{n+1} = \frac12\left(x_n + \frac{\alpha}{x_n}\right) \\
+    (\text{nach I.V.})\Rightarrow&\quad x_{n+1}= \frac12\left(\sqrt{\alpha} + h_n + \frac{\alpha}{\sqrt{\alpha} + h_n}\right) \\
+    (\text{analog Fall 3})\Rightarrow&\quad x_{n+1} = \sqrt{\alpha} \left(1 + \frac{h_n^2}{2\sqrt{\alpha}\left(\sqrt{\alpha} + h_n\right)}\right) > \sqrt{\alpha},
+\end{align*}
+also folgt aus der Induktionsannahme für $n$, dass die Aussage für $n+1$ wahr ist. Somit gilt nach dem Satz der vollständigen Induktion $x_n > \sqrt{\alpha}$ für $n\geq 2$.
+
+Es bleibt zu zeigen, dass $x_n$ monoton fällt für $n\geq 2$, also $x_{n+1} - x_n < 0$:
+\begin{align*}
+    x_{n+1} - x_n &= \frac12\left(x_n + \frac{\alpha}{x_n}\right) -x_n\\
+    &= \frac12\left(\frac{\alpha}{x_n} - x_n\right) \\
+    &= \frac12\frac{\alpha - x_n^2}{x_n} \\
+    &= \frac{1}{2 x_n} \underbrace{\left(\sqrt{\alpha} + x_n\right)}_{>0} \underbrace{\left(\sqrt{\alpha} - x_n\right)}_{<0} \\
+    \Rightarrow x_{n+1} - x_n < 0,
+\end{align*}
+also ist $x_n$ monoton fallend.
+
+Sei Der Grenzwert $\lim x_n \coloneqq x$. Dann ist auch $\lim x_{n+1} = x$
+\begin{align*}
+    \Rightarrow \lim x_{n+1} &= \frac12 \left(\lim x_n + \frac{\alpha}{\lim x_n}\right) \\
+    \Rightarrow x &= \frac12 \left(x + \frac{\alpha}{x}\right) \\
+    \Leftrightarrow 2x &= x + \frac{\alpha}{x} \Leftrightarrow x = \frac{\alpha}{x} \Leftrightarrow x^2 = \alpha \Leftrightarrow x = \sqrt{\alpha} \\
+    \Rightarrow \lim x_n &= \sqrt{\alpha}
+\end{align*}
+Die Reihe konvergiert also gegen $\sqrt{\alpha}$.
 \end{lsg}
 
 

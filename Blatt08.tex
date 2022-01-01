@@ -12,20 +12,20 @@ konvergiert. Konvergiert oder divergiert die Reihe?
 
 \begin{lsg}[Carlotta Hohaus, Gina Walter]
 Wir teilen die \emph{unharmonische} Reihe auf und betrachten alle Summanden, die die gleiche Stellenanzahl im Nenner haben, zusammen.
-	Betrachtet man die Nenner mit \emph{n} Stellen, gibt es genau $9^{n}$ von diesen, da an jeder der \emph{n} Stellen genau $9$ Ziffern stehen können.
-	Jeder der n-stelligen Summanden ist nun auf jeden Fall kleiner $\frac{1}{10^{n-1}}$. Somit gilt für die \emph{unharmonische} Reihe folgendes:
-	\begin{align*}
-		U&<\sum\limits_{n=1}^\infty 9^{n}\frac{1}{10^{n-1}}\\
-		&=9\sum\limits_{n=1}^\infty 9^{n-1}\frac{1}{10^{n-1}}\\
-		&=9\sum\limits_{n=1}^\infty (\frac{9}{10})^{n-1}\\
-		&=9\sum\limits_{n=0}^\infty (\frac{9}{10})^{n}
-	 \end{align*}
-	Somit haben wir eine geometrische Reihe produziert. Die geometrische Reihe konvergiert, wenn die Basis kleiner als $1$ ist, was $\frac{9}{10}$ erfüllt.
-	Diese geometrische Reihe konvergiert gegen $\frac{1}{1-\frac{9}{10}}=\frac{1}{\frac{1}{10}}=10$ und somit ist
-	\begin{align*}
-		U<9*10=90
-	\end{align*}
-	Da U zusätzlich streng monoton wachsend, konvergiert die \emph{unharmonische} Reihe und somit wurde der Grinch bei seinem Vorhaben, die Welt ins Chaos zu st\"urzen, aufgehalten. 
+Betrachtet man die Nenner mit \emph{n} Stellen, gibt es genau $9^{n}$ von diesen, da an jeder der \emph{n} Stellen genau $9$ Ziffern stehen können.
+Jeder der n-stelligen Summanden ist nun auf jeden Fall kleiner $\frac{1}{10^{n-1}}$. Somit gilt für die \emph{unharmonische} Reihe folgendes:
+\begin{align*}
+U&<\sum\limits_{n=1}^\infty 9^{n}\frac{1}{10^{n-1}}\\
+&=9\sum\limits_{n=1}^\infty 9^{n-1}\frac{1}{10^{n-1}}\\
+&=9\sum\limits_{n=1}^\infty (\frac{9}{10})^{n-1}\\
+&=9\sum\limits_{n=0}^\infty (\frac{9}{10})^{n}
+ \end{align*}
+Somit haben wir eine geometrische Reihe produziert. Die geometrische Reihe konvergiert, wenn die Basis kleiner als $1$ ist, was $\frac{9}{10}$ erfüllt.
+Diese geometrische Reihe konvergiert gegen $\frac{1}{1-\frac{9}{10}}=\frac{1}{\frac{1}{10}}=10$ und somit ist
+\begin{align*}
+U<9*10=90
+\end{align*}
+Da U zusätzlich streng monoton wachsend, konvergiert die \emph{unharmonische} Reihe und somit wurde der Grinch bei seinem Vorhaben, die Welt ins Chaos zu st\"urzen, aufgehalten. 
 \end{lsg}
 
 
@@ -46,9 +46,119 @@ Wir teilen die \emph{unharmonische} Reihe auf und betrachten alle Summanden, die
 
 \bigskip
 
-\begin{lsg}\mbox{ }
+\begin{lsg}%\mbox{ }
+Es gilt zu überprüfen, ob die folgenden Reihen konvergieren oder divergieren.
 \begin{enumerate}[label=$\mathrm{(\roman*)}$, ref=$\mathrm{\roman*}$]
-\item 
+\item $\sum^{\infty}_{k=1}\frac{1}{k^2}$ Wir versuchen die Konvergenz durch das finden einer konvergenten Majoranten zu beweisen. \\
+Abschätzung:
+\begin{align*}
+\sum^{\infty}_{k=1}\frac{1}{k^2} = \sum^{\infty}_{k=1}\frac{2}{k^2 + k^2} \leq \sum^{\infty}_{k=1}\frac{2}{k^2 + k} = \sum^{\infty}_{k=1}\frac{2}{k(k + 1)}
+\end{align*}
+Dies können wir jetzt noch umschreiben:
+\begin{align*}
+&\sum^{\infty}_{k=1}\frac{2}{k(k + 1)} \\
+= & \sum^{\infty}_{k=1}\frac{2(k-(k+1))}{k(k + 1)(k-(k+1))} \\
+= & \sum^{\infty}_{k=1}\left(\frac{2k}{k(k+1)(k-(k+1))}-\frac{2(k+1)}{k(k+1)(k-(k+1))}\right) \\
+= & \sum^{\infty}_{k=1}\left(\frac{2}{(k+1)(k-(k+1))}-\frac{2}{k(k-(k+1))}\right) \\
+= & \sum^{\infty}_{k=1}\left(\frac{2}{k^2-k(k+1)+k-(k+1)}-\frac{2}{k^2-k(k+1)}\right)
+\end{align*}
+\begin{align*}
+= & \sum^{\infty}_{k=1}\left(\frac{2}{k^2-k^2-(k+1)}-\frac{2}{k^2-k^2-k}\right) \\
+= & \sum^{\infty}_{k=1}\left(\frac{2}{-(k+1)}-\frac{2}{-k}\right) \\
+= & \sum^{\infty}_{k=1}\left(\frac{2}{k}-\frac{2}{k+1}\right)
+\end{align*}
+Nun haben wir eine Teleskopsumme, die wie folgt aussieht:
+\begin{align*}
+\sum^{\infty}_{k=1}\left(\frac{2}{k}-\frac{2}{k+1}\right) = \left(\frac{2}{1} - \frac{2}{2}\right) + \left(\frac{2}{2} - \frac{2}{3}\right) + \left(\frac{2}{3} - \frac{2}{4}\right) \pm \ldots
+\end{align*}
+Dies kann man jetzt so umklammern, dass nur noch der erste und der letzte Wert übrig bleiben.
+\begin{align*}
+\sum^{\infty}_{k=1}\left(\frac{2}{k}-\frac{2}{k+1}\right) = &\frac{2}{1} + \left(-\frac{2}{2} + \frac{2}{2}\right) + \left(-\frac{2}{3} + \frac{2}{3}\right) + \left(-\frac{2}{4} + \frac{2}{4}\right) \pm \ldots \\
+= & 2 - \lim_{k \to \infty}\frac{2}{k} = 2 - 0 = 2
+\end{align*}
+Somit haben wir für die Reihe $\sum^{\infty}_{k=1}\frac{1}{k^2}$, mit $\sum^{\infty}_{k=1}\frac{2}{k(k + 1)}$ eine konvergente Majorante gefunden, wodurch $\sum^{\infty}_{k=1}\frac{1}{k^2}$ absolut konvergent ist, und damit nach Satz 3.65 konvergent.
+
+\item $\sum^{\infty}_{n=1}\frac{n^4}{2^n}$ Anwenden des Wurzelkriteriums (W.K.).
+\begin{align*}
+a_n:=\frac{n^4}{2^n} \overset{\text{W.K.}}{\Rightarrow} &\sqrt[n]{\left|\frac{n^4}{2^n}\right|} = \sqrt[n]{\frac{n^4}{2^n}} \\
+= &\frac{\sqrt[n]{n^4}}{\sqrt[n]{2^n}} = \frac{(\sqrt[n]{n})^4}{2}
+\end{align*}
+Wir wissen nach Beispiel 3.5 (iii), dass der $\lim_{n \to \infty}\sqrt[n]{n} = 1$ ist. Daraus folgt nach Satz 3.16:
+\begin{align*}
+\lim_{n \to \infty} \frac{(\sqrt[n]{n})^4}{2} = \frac{\lim_{n \to \infty} (\sqrt[n]{n})^4}{\lim_{n \to \infty} 2} = \frac{1^4}{2} = \frac{1}{2} < 1 \\
+\Rightarrow \text{absolut konvergent} \overset{\text{Satz 3.65}}{\Longrightarrow} \text{konvergent}
+\end{align*}
+
+\item $\sum^{\infty}_{p=5}\binom{p+2}{p}^{-\frac{1}{p}}$
+\begin{align*}
+\sum^{\infty}_{p=5}\binom{p+2}{p}^{-\frac{1}{p}} = &\sum^{\infty}_{p=5}\left(\frac{(p+2)!}{p!((p+2)-p)!}\right)^{-\frac{1}{p}} = \sum^{\infty}_{p=5}\left(\frac{(p+2)!}{p!\cdot 2!}\right)^{-\frac{1}{p}} \\
+= &\sum^{\infty}_{p=5}\left(\frac{(p+2)\cdot (p+1) \cdot p!}{p!\cdot 2!}\right)^{-\frac{1}{p}} = \sum^{\infty}_{p=5}\left(\frac{(p+2)\cdot (p+1)}{2!}\right)^{-\frac{1}{p}} \\
+= & \sum^{\infty}_{p=5}\left(\frac{2!}{(p+2)\cdot (p+1)}\right)^{\frac{1}{p}} = \sum^{\infty}_{p=5}\left(\frac{\sqrt[p]{2}}{\sqrt[p]{(p+2)\cdot (p+1)}}\right) \\
+= & \sum^{\infty}_{p=5}\left(\frac{\sqrt[p]{2}}{\sqrt[p]{p+2}\cdot \sqrt[p]{p+1}}\right)
+\end{align*}
+Wir betrachten nun den Grenzwert der Folge $a_p:=\left(\frac{\sqrt[p]{2}}{\sqrt[p]{p+2}\cdot \sqrt[p]{p+1}}\right)_p$:
+\begin{align*}
+\lim_{p \to \infty}\frac{\sqrt[p]{2}}{\sqrt[p]{p+2}\cdot \sqrt[p]{p+1}}
+\end{align*}
+Wir dürfen nach Satz 3.16 nun die einzelnen Grenzwerte betrachten.
+\begin{align*}
+&\frac{\lim\sqrt[p]{2}}{\lim\sqrt[p]{p+2}\cdot \lim\sqrt[p]{p+1}} \\
+= & \frac{1}{1\cdot 1} = 1
+\end{align*}
+Da es sich hier um keine Nullfolge handelt, kann die Reihe $\sum^{\infty}_{p=5}\binom{p+2}{p}^{-\frac{1}{p}}$ erst recht nicht konvergieren, also muss sie divergent sein.
+
+\item $\sum^{\infty}_{n=2}\frac{1}{n}(\sqrt[n]{n}-\sqrt[n+1]{n+1})$ Wir versuchen wieder die Konvergenz durchs finden einer konvergenten Majoranten zu zeigen. \\
+Abschätzen:
+\begin{align*}
+\sum^{\infty}_{n=2}\frac{1}{n}(\sqrt[n]{n}-\sqrt[n+1]{n+1}) \leq \sum^{\infty}_{n=2}(\sqrt[n]{n}-\sqrt[n+1]{n+1})
+\end{align*}
+Nun haben wir eine Teleskopreihe, die wie folgt aussieht:
+\begin{align*}
+\sum^{\infty}_{n=2}(\sqrt[n]{n}-\sqrt[n+1]{n+1}) = &(\sqrt{2} - \sqrt[3]{3}) + (\sqrt[3]{3} - \sqrt[4]{4}) + (\sqrt[4]{4} - \sqrt[5]{5}) + \ldots \\
+= &\sqrt{2} + (-\sqrt[3]{3}) + \sqrt[3]{3}) + (-\sqrt[4]{4} + \sqrt[4]{4}) + (-\sqrt[5]{5} + \sqrt[5]{5}) + \ldots + (-\lim_{n \to \infty} \sqrt[n]{n}) \\
+= &\sqrt{2} - \lim_{n \to \infty} \sqrt[n]{n} \\
+= &\sqrt{2} - 1
+\end{align*}
+Somit wissen wir, dass unsere Teleskopreihe nach $\sqrt{2} - 1$ konvergiert, wodurch wir eine konvergente Majorante für die Reihe $\sum^{\infty}_{n=2}\frac{1}{n}(\sqrt[n]{n}-\sqrt[n+1]{n+1})$ gefunden haben.
+
+\item $\sum^{\infty}_{q=1}(-1)^{q+1}\frac{\sqrt[q]{q}}{q}$. Dies ist eine alternierende Reihe: Wir zeigen nun, dass $(b_q)_{q > 0}:=\left(\frac{\sqrt[q]{q}}{q}\right)_q$ eine monoton fallende Nullfolge ist. Dann ist nämlich nach dem Satz 3.67 (Konvergenzkriterium von Leibniz) unsere alternierende Reihe konvergent. Wir zeigen also nun, dass der Grenzwert $0$ ist:
+\begin{align*}
+\lim_{q \to \infty}\frac{\sqrt[q]{q}}{q} \\
+= \lim_{q \to \infty}\left(\sqrt[q]{q}\cdot \frac{1}{q}\right)
+\end{align*}
+Wir wissen das sowohl $\sqrt[q]{q}$ und $\frac{1}{q}$ konvergiert, aus diesem Grund können wir mit Satz 3.16 es nun so schreiben.
+\begin{align*}
+= &\lim_{q \to \infty}\sqrt[q]{q}\cdot \lim_{q \to \infty}\frac{1}{q} \\
+= &1 \cdot 0 = 0
+\end{align*}
+Somit ist unsere Folge $(b_q)_q$ eine Nullfolge. \\
+Dadurch, dass $\sqrt[q]{q}$ ab einer ganzen Zahl von $3$ monoton fällt und, müssen wir nur noch die Fälle $q=1 und q=2$ betrachten.
+\begin{itemize}
+\item[$q=1$:]\begin{align*}
+1 = \frac{\sqrt[1]{1}}{1} < \frac{\sqrt[1+1]{1+1}}{1+1} = \frac{\sqrt[2]{2}}{2}
+\end{align*}
+Dies stimmt, da die Quadratwurzel von 2 ungefähr bei $1,4$ liegt und dies geteilt durch $2$ kleiner als $1$ ist.
+\item[$q=2$:]\begin{align*}
+&\frac{\sqrt[2]{2}}{2} < \frac{\sqrt[2+1]{2+1}}{2+1} = \frac{\sqrt[3]{3}}{3} \\
+\Leftrightarrow &\frac{\sqrt[2]{2^3}}{2^3} < \frac{1}{9} \\
+\Rightarrow &\frac{2 \cdot \sqrt[2]{2}}{8} \\
+\Rightarrow &\frac{\sqrt[2]{2}}{4} = \frac{\sqrt{2}}{\sqrt{2^4}} = \frac{\sqrt{2}}{(\sqrt{2})^4} \\
+= &\frac{1}{(\sqrt{2})^3} = \frac{1}{\sqrt{8}} \\
+\Rightarrow \frac{1}{\sqrt{8}} > \frac{1}{9}
+\end{align*}
+Dies stimmt auch, da $\frac{1}{9} < \frac{1}{8} < \frac{1}{\sqrt{8}}$
+\end{itemize}
+Somit ist $\sum^{\infty}_{q=1}(-1)^{q+1}\frac{\sqrt[q]{q}}{q}$ konvergent.
+
+\item $\sum^{\infty}_{n=100}\frac{1}{\sqrt{n!}}$ Anwenden des Quotientenkriteriums (Q.K.).
+\begin{align*}
+a_n:=\frac{1}{\sqrt{n!}} \overset{\text{Q.K.}}{\Longrightarrow} \left|\frac{\sqrt{n!}}{\sqrt{(n+1)!}}\right| = \sqrt{\frac{n!}{(n+1)!}}= \sqrt{\frac{1}{n+1}}
+\end{align*}
+Da hier der Limes Inf = Limes Sup ist, reicht es den Limes von $\sqrt{\frac{1}{n+1}}$ zu betrachten.
+\begin{align*}
+\lim_{n \to \infty} \sqrt{\frac{1}{n+1}} = \sqrt{\lim_{n \to \infty} \frac{1}{n+1}} = \sqrt{0} = 0 < 1
+\end{align*}
+Somit ist die Reihe $\sum^{\infty}_{n=100}\frac{1}{\sqrt{n!}}$ konvergent.
 \end{enumerate}
 \end{lsg}
 
@@ -67,7 +177,63 @@ Gegeben sei die Reihe $\sum\limits_{n=0}^\infty 2^{(-1)^n-n}$. Zeigen Sie:
 
 \begin{lsg}\mbox{ }
 \begin{enumerate}[label=$\mathrm{(\roman*)}$, ref=$\mathrm{\roman*}$]
-\item 
+\item Anzugeben ist die konvergente Majorante.
+\begin{align*}
+\sum^{\infty}_{n=0} 2^{(-1)^n - n} = \sum^{\infty}_{n=0} \left|\frac{2^{(-1)^n}}{2^n}\right| \leq \sum^{\infty}_{n=0} \frac{2}{2^n}
+\end{align*}
+Wenn wir nun zeigen, dass $\sum^{\infty}_{n=0} \frac{2}{2^n}$ konvergiert, dann haben wir unsere konvergente Majorante. Dafür nutzen wir das Wurzelkriterium.
+\begin{align*}
+a_n:=\frac{2}{2^n} \overset{\text{W.K.}}{\Longrightarrow} \lim_{n \to \infty}\sqrt[n]{\left|\frac{2}{2^n}\right|} = \lim_{n \to \infty}\frac{\sqrt[n]{2}}{\sqrt[n]{2^n}} = \lim_{n \to \infty}\frac{\sqrt[n]{2}}{2} = \frac{1}{2} < 1
+\end{align*}
+Da nach dem W.K. es kleiner als $1$ ist, ist $\sum^{\infty}_{n=0} \frac{2}{2^n}$ konvergent und somit eine konvergente Majorante zu $\sum^{\infty}_{n=0} \frac{2^{(-1)^n}}{2^n}$.
+\item Konvergenz über das W.K. ermitteln.
+\begin{align*}
+a_n:= \frac{2^{(-1)^n}}{2^n} \overset{\text{W.K.}}{\Longrightarrow} \limsup_{n \to \infty}\sqrt[n]{\left|\frac{2^{(-1)^n}}{2^n}\right|}
+\end{align*}
+\begin{align*}
+\limsup_{n \to \infty}\sqrt[n]{\frac{2^{(-1)^n}}{2^n}} = \limsup_{n \to \infty}\frac{\sqrt[n]{2^{(-1)^n}}}{\sqrt[n]{2^n}} = \limsup_{n \to \infty}\frac{\sqrt[n]{2^{(-1)^n}}}{2}
+\end{align*}
+Wir betrachten nun die Fälle $n$ ist gerade und $n$ ist ungerade.
+\begin{itemize}
+\item $n$ ist gerade:
+\begin{align*}
+n = 2k ,k\in \mathbb{N} \\
+\Rightarrow &\limsup_{k \to \infty}\frac{\sqrt[2k]{2^{(-1)^{2k}}}}{2} = \limsup_{k \to \infty}\frac{\sqrt[2k]{2^{1^k}}}{2} \\
+= &\limsup_{k \to \infty}\frac{\sqrt[2k]{2}}{2} = \frac{1}{2} < 1 \Rightarrow \text{konvergent}
+\end{align*}
+
+\item $n$ ist ungerade:
+\begin{align*}
+n = 2k+1 ,k \in \mathbb{N} \\
+\Rightarrow &\limsup_{k \to \infty}\frac{\sqrt[2k+1]{2^{(-1)^{2k+1}}}}{2} = \limsup_{k \to \infty}\frac{\sqrt[2k+1]{2^{1^k \cdot (-1)}}}{2} \\
+= &\limsup_{k \to \infty}\frac{\sqrt[2k+1]{2^{(-1)}}}{2} = \limsup_{k \to \infty}\frac{\sqrt[2k+1]{\frac{1}{2}}}{2} \\
+= &\frac{1}{2} < 1 \Rightarrow \text{kovergent}
+\end{align*}
+\end{itemize}
+Hieraus folgt nach dem Einschnürungssatz, dass $\limsup_{n \to \infty}\frac{\sqrt[n]{2^{(-1)^n}}}{2} = \frac{1}{2} < 1$ ist, da $\frac{\sqrt[n]{\frac{1}{2}}}{2} \leq \frac{\sqrt[n]{2^{(-1)^n}}}{2} \leq \frac{\sqrt[n]{2}}{2}$, dies bedeutet, dass $\sum^{\infty}_{n=0} 2^{(-1)^n - n}$ konvergiert nach dem W.K..
+\item Z.z.: Das Quotientenkriterium gibt keine Information über das Konvergenzverhalten. Es muss also dies gelten:
+\begin{align*}
+\liminf\left|\frac{a_{n+1}}{a_n}\right|\leq 1 \leq \limsup\left|\frac{a_{n+1}}{a_n}\right|
+\end{align*}
+Ermitteln des Limes Sup von $\sum^{\infty}_{n=0} 2^{(-1)^n - n}$ mit Hilfe von Q.K., $a_n:=2^{(-1)^n - n}$:
+\begin{align*}
+\limsup\left|\frac{a_{n+1}}{a_n}\right| = &\limsup\left|\frac{2^{(-1)^{n+1}-(n+1)}}{2^{(-1)^n - n}}\right| = \limsup\left|\frac{2^{(-1)^{n+1}}}{2^{n+1}}\cdot \frac{2^n}{2^{(-1)^n}}\right| \\
+=& \limsup\left|\frac{2^{(-1)^{n+1}}\cdot 2^n}{2^{(-1)^n}\cdot 2^{n+1}}\right| = \limsup\left|\frac{2^{(-1)^{n+1}}}{2^{(-1)^n}\cdot 2}\right| = \limsup\left|\frac{2^{(-1)^n \cdot (-1)}}{2^{(-1)^n}\cdot 2}\right| \\
+=& \limsup\left|\frac{2^{(-1)^n \cdot (-1)}\cdot 2^{(-1)^n \cdot (-1)}}{2}\right| = \limsup\left|\frac{4^{(-1)^{n+1}}}{2}\right| = \limsup\left|\frac{4^{(-1)^{n+1}}}{2}\right|
+\end{align*}
+Es gibt jetzt 2 Möglichkeiten, entweder ist $n$ ungerade oder gerade.
+\begin{itemize}
+\item \begin{align*}
+&n = 2k ,k \in \mathbb{N} \\
+&\Rightarrow \lim_{k \to \infty}\left|\frac{4^{(-1)^{2k+1}}}{2}\right| = \lim_{k \to \infty}\frac{4^{(-1)}}{2}= \frac{1}{8}
+\end{align*}
+\item\begin{align*}
+&n = 2k + 1, k \in \mathbb{N} \\
+&\Rightarrow \lim_{k \to \infty}\left|\frac{4^{(-1)^{2k+1+1}}}{2}\right| = \lim_{k \to \infty}\left|\frac{4^{(-1)^{2k+2}}}{2}\right| = \lim_{k \to \infty}\left|\frac{4^{1^k\cdot 1}}{2}\right| = \lim_{k \to \infty}\frac{4}{2} = 2
+\end{align*}
+\end{itemize}
+Da der größere Grenzwert die $2$ ist, ist auch unser $\limsup\left|\frac{4^{(-1)^{n+1}}}{2}\right| = 2 > 1$, der kleinere Grenzwert wäre dann das Limes Inf von $\left|\frac{4^{(-1)^{n+1}}}{2}\right|$. Somit ist unser Limes Inf $= \frac{1}{8} < 1$ und wir können somit keine Aussage aus dem Quotientenkriterium ziehen.
+
 \end{enumerate}
 \end{lsg}
 

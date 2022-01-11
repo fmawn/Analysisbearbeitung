@@ -81,6 +81,69 @@ f\"ur alle $s\in \R$, $s>1$. Zeigen Sie, dass $\zeta(n) < 2$ f\"ur alle nat\"url
 \bigskip
 
 \begin{lsg} 
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Lösung 9.4}
+\author{Zehra Ciftci, Sude Cinar, Saveen Kassem}
+\date{January 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Aufgabe 9.4}
+
+Z.z.: $\zeta(n) < 2$ f\"ur alle nat\"urlichen Zahlen $n\geq 2$. 
+
+
+Es gilt nach Beispiel 3.60: 
+
+
+
+\[ \displaystyle\sum_{k=1}^{\infty}\frac{1}{k^{2}}\]
+
+ist eine konvergente Majorante für
+
+\[ \displaystyle\sum_{k=1}^{\infty}\frac{1}{k^{m}}\] 
+
+mit natürlichem m $>$ 2. Außerdem gilt: $k^m > k^2$   \iff  $$\frac{1}{k^2} < \frac{1}{k^m}$$.
+
+Auch gilt, dass die erste Patrialsumme mit dem Wert 1 gleich ist.
+
+In Übungsblatt 8 wurde bewiesen, dass 
+
+\[ \displaystyle\sum_{k=1}^{\infty}\frac{2}{(k+1)}=2}\]
+
+eine konvergente Majorante für 
+
+\[ \displaystyle\sum_{k=1}^{\infty}\frac{1}{k^{2}}\]
+
+und dass das erste Glied der Reihe gleich ist.
+
+Somit entspricht: 
+\
+
+$\[ \displaystyle\sum_{k=1}^{\infty}\frac{1}{k^{2}}\] < \[ \displaystyle\sum_{k=1}^{\infty}\frac{2}{(k+1)}=2}\] $. 
+  
+ \vspace{0.5 cm}
+Nach dem Axiom der Transitivität der Anorndnung gilt: 
+
+$\[ \displaystyle\sum_{k=1}^{\infty}\frac{1}{k^{m}}\] < \[ \displaystyle\sum_{k=1}^{\infty}\frac{1}{k^{2}}\] < \[ \displaystyle\sum_{k=1}^{\infty}\frac{2}{(k+1)}=2}\] $
+
+\vspace{0.5 cm}
+Nun kann man mit der Definition der Riemannschen-Zeta-Funktion ausdrücken, dass mit einer weiterhin natürlichen Zahl größer 2 folgendes gilt:
+\vspace{0.5 cm}
+
+$\[\zeta(m) = \displaystyle\sum_{k=1}^{\infty}\frac{1}{k^{m}}\] < \[\zeta(2) = \displaystyle\sum_{k=1}^{\infty}\frac{1}{k^{2}}\] < \[ \displaystyle\sum_{k=1}^{\infty}\frac{2}{(k+1)}=2}\]$
+
+\vspace{0.5 cm}
+also kurz: $$ \zeta(m) < \zeta(2) < 2 $.
+
+Somit wurde $\zeta(n) < 2$ f\"ur alle nat\"urlichen Zahlen $n\geq 2$ gezeigt.
+
+
+\end{document}
 \end{lsg}
  
 \bigskip

@@ -56,9 +56,29 @@ Die Exponentialfunktion $\exp\colon\R\to\R$ ist gegeben durch (siehe Vorlesung)
  
 \bigskip
 
-\begin{lsg}\mbox{ }
+\begin{lsg}\mbox{Lennart Koliwer, Tjado Edzards}
 \begin{enumerate}[label=$\mathrm{(\roman*)}$, ref=$\mathrm{\roman*}$]
-\item 
+\item
+Z.z.:
+\begin{align*}
+\text{exp}(x) \cdot \text{exp}(y) = \text{exp}(x+y) &\Leftrightarrow \sum_{k=0}^{\infty}\frac{x^k}{k!}\cdot \sum_{k=0}^{\infty}\frac{y^k}{k!} = \sum_{k=0}^{\infty}\frac{(x+y)^k}{k!}
+\\
+\intertext{Mit dem Cauchy-Produkt ergibt sich aus exp($x$)exp($y$) folgendes:}
+\sum_{k=0}^{\infty}\frac{x^k}{k!}\cdot \sum_{k=0}^{\infty}\frac{y^k}{k!} &= \sum_{k=0}^{\infty}\sum_{n=0}^{k}\frac{x^n}{n!}\cdot \frac{y^{k-n}}{(k-n)!}
+\\
+\intertext{Zur Vereinfachung wird die Summe mit 1 multipliziert.}
+&=\sum_{k=0}^{\infty}\sum_{n=0}^{k}\frac{x^n}{n!}\cdot \frac{y^{k-n}}{(k-n)!}\cdot \frac{k!}{k!}
+\\
+&=\sum_{k=0}^{\infty}\sum_{n=0}^{k}\frac{k!\cdot x^n\cdot y^{k-n}}{n!\cdot(k-n)!}\cdot \frac{1}{k!}
+\intertext{Dabei lässt sich der Binomialkoeffizient finden.}
+&=\sum_{k=0}^{\infty}\sum_{n=0}^{k}\binom{k}{n} \cdot x^n\cdot y^{k-n} \cdot \frac{1}{k!}
+\\
+&=\sum_{k=0}^{\infty}\frac{1}{k!}\sum_{n=0}^{k}\binom{k}{n} \cdot x^n\cdot y^{k-n}
+\intertext{Cool das haben wir ja schon bewiesen :) Blatt 5 Binomischer Lehrsatz: $\sum_{n=0}^{k}\binom{k}{n} \cdot x^n\cdot y^{k-n} = (x+y)^k$}
+&=\sum_{k=0}^{\infty}\frac{1}{k!}\cdot (x+y)^k
+\\
+\text{exp}(x+y)&=\sum_{k=0}^{\infty}\frac{(x+y)^k}{k!}
+\end{align*}
 \end{enumerate}
 \end{lsg}
 

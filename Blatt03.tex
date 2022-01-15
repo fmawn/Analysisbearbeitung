@@ -72,7 +72,99 @@ ist und leiten Sie eine entsprechende Formel f\"ur die kleinste obere Schranke h
 
 \bigskip
 
-\begin{lsg}
+\begin{lsg}[Niklas Gercken]
+Z.z. $\inf\{x,y\}=\frac{x+y-|y-x|}{2}$ 
+\subsection*{1.Fall} 
+$x<y, \ \inf\{x,y\}=x$
+\begin{align*}
+    x&<y \\
+    x-x&<y-x \\
+    0&<y-x \\
+\end{align*}
+Daraus folgt $|y-x|=y-x$
+\begin{align*}
+    \frac{x+y-|y-x|}{2}=\frac{x+y-(y-x)}{2}
+\end{align*}
+$-(y-x)$ ist definiert als die eindeutige Lösung $a$ von $a+(y-x)=0$. \\
+Wir zeigen, dass auch $-y+x$ die Gleichung löst.\\
+$(-y+x)+(y-x)=0$\\
+Mit Axiomen und Sätzen ist
+\begin{align*}
+    (-y+x)+(y-x)&=((-y)+x)+(y+(-x))\\
+    &=((-y)+x)+((-x)+y)\\
+    &=(((-y)+x)+(-x))+y\\
+    &=((-y)+(x+(-x)))+y\\
+    &=((-y)+0)+y\\
+    &=(-y)+y\\
+    &=y+(-y)=0
+\end{align*}
+Also
+\begin{align*}
+    \frac{x+y-(y-x)}{2}&=\frac{x+y-y+x}{2}\\
+    &=\frac{2x}{2}=x
+\end{align*}
+\subsection*{2.Fall} 
+$x>y, \ \inf\{x,y\}=y$
+\begin{align*}
+    x&>y \\
+    x-x&>y-x \\
+    0&>y-x \\
+\end{align*}
+Daraus folgt $|y-x|=-(y-x)$
+\begin{align*}
+    \frac{x+y-|y-x|}{2}=\frac{x+y-(-(y-x))}{2}
+\end{align*}
+Nach Satz 2.8(iii) $-(-(y-x))=y-x$\\
+Also
+\begin{align*}
+    \frac{x+y-(-(y-x))}{2}&=\frac{x+y+y-x}{2}\\
+    &=\frac{2y}{2}=y
+\end{align*}
+\subsection*{3.Fall} 
+$x=y, \ \inf\{x,y\}=y, \inf\{x,y\}=x$
+\begin{align*}
+    x&=y \\
+    x-x&=y-x \\
+    0&=y-x \\
+\end{align*}
+Daraus folgt $|y-x|=|0|=0$
+\begin{align*}
+    \frac{x+y-0}{2}=\frac{x+y}{2}
+\end{align*}
+Da $y=x \Rightarrow x+y=2y$ \\
+und $y=x \Rightarrow x+y=2x$
+Also
+\begin{align*}
+    \frac{2x}{2}&=x\\
+\end{align*}
+Und 
+\begin{align*}
+    \frac{2y}{2}&=y\\
+\end{align*}
+Also gilt
+\begin{align*}
+    \inf\{x,y\}=\frac{x+y-|y-x|}{2}
+\end{align*}
+\begin{flushright}
+$\square$
+\end{flushright}
+Eine entsprechende Formel für die kleinste obere Schranke finden. \\
+\begin{align*}
+    \sup\{x,y\}=\frac{x+y+|y-x|}{2}
+\end{align*}
+Wenn wir nämlich das - durch ein + ersetzen, drehen sich in allen vorher betrachteten Fällen die Vorzeichen in $|x-y|$ um.\\
+Also für $x>y, \sup(\{x,y\})=x$
+\begin{align*}
+    \frac{x+y+|y-x|}{2}=x
+\end{align*}
+Für $x<y, \sup(\{x,y\})=y$
+\begin{align*}
+    \frac{x+y+|y-x|}{2}=x
+\end{align*}
+Und für $x=y, \sup(\{x,y\})=x$ und $\sup(\{x,y\})=y$
+\begin{align*}
+    \frac{x+y+|y-x|}{2}=x \ \text{und} \ \frac{x+y+|y-x|}{2}=y
+\end{align*}
 \end{lsg}
 
 

@@ -22,7 +22,38 @@ Bestimmen Sie au{\ss}erdem $\limsup x_n$ und $\liminf x_n$.
 
 \bigskip
 
-\begin{lsg}
+\begin{lsg}[Siyao Zhang, Alexander Unterberger]
+Wir \"uberpr\"ufen $x_n$ auf Teilfolgen:\\
+Zuerst betrachten wir alle geraden Zahlen und setzen $n=2k$ mit $k\in \mathbb{N}$\\
+
+\begin{equation}
+\begin{aligned}
+    x_{2k} &= (-1)^{\lfloor \frac{2k}{2}\rfloor} \left(7+(-1)^{2k}\left(1+\frac{1}{2k}\right)^{2k+1} \right)\\
+    &= (-1)^k \left(7+(-1)^{2k}\left(1+\frac{1}{2k}\right)^{2k+1} \right)\\
+    &= (-1)^k \left(7+e \right)\\
+\end{aligned}
+\end{equation}
+\\
+$\Rightarrow$ Diese Teilfolge hat 2 H\"aufungswerte: $(7+e)$ und $(-7-e)$.\\
+\\
+Nun betrachten wir alle ungeraden Zahlen und setzen $n=2k+1$ mit $k\in \mathbb{N}$\\
+\begin{equation}
+\begin{aligned}
+    x_{2k+1} &= (-1)^{\lfloor \frac{2k+1}{2}\rfloor} \left(7+(-1)^{2k+1}\left(1+\frac{1}{2k+1}\right)^{2k+2} \right)\\
+    &= (-1)^{\lfloor \frac{2}{2}k+\frac{1}{2}\rfloor} \left(7+(-1)\left(1+0\right)^{2k+2} \right)\\
+    &= (-1)^k \left(7-1 \right)\\
+\end{aligned}
+\end{equation}
+\\
+$\Rightarrow$ Diese Teilfolge hat 2 H\"aufungswerte: $6$ und $-6$.\\
+\\
+Daraus folgt, dass die Folge insgesamt 4 H\"aufungswerte hat: $6$, $-6$ und $(7+e)$, $(-7-e)$.\\
+\\
+Nach Satz 3.45 gilt für den gr\"o{\ss}ten bzw. kleinsten H\"aufungswert:\\
+\\
+$\limsup\limits_{n \to \infty} x_n = \sup\{S_n|n\in\mathbb{N}\}=(7+e)$\\
+\\
+$\liminf\limits_{n \to \infty} x_n = \inf\{I_n|n\in\mathbb{N}\}=(-7-e)$
 \end{lsg}
 
 \bigskip

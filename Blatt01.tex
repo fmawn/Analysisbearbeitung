@@ -31,8 +31,58 @@ Es seien $A$, $B$ und $C$ Mengen. Beweisen Sie:
  
 \bigskip 
 
-\begin{lsg}
- 
+\begin{lsg}[Ole Conradi, Sam Nilles]
+\begin{enumerate}[label=$\mathrm{(\roman*)}$, ref=$\mathrm{\roman*}$]
+\item
+ \(
+\text{Z.z.} ~A\cup B = A\cap B \quad\Leftrightarrow\quad  A=B\ \\
+\text{Wir wissen:} \\
+(A \cap B) \subseteq A, (A \cap B) \subseteq B, A \subseteq (A \cup B)  ~\text{und}~ B \subseteq (A \cup B)\\
+\text{Ist}~ A \cup B = A \cap B, ~\text{dann gilt:}\\
+A \subseteq (A \cup B) \subseteq B \Rightarrow A \subseteq B\\
+\text{Analog}~B \subseteq (A \cup B) \subseteq A \Rightarrow B \subseteq A \Rightarrow A = B\\
+\text{Das heißt} ~ A\cup B = A\cap B ~\text{genau dann, wenn gilt:}~  A=B.
+\\\)
+
+
+\item
+\(
+\text{Z.z.}~A \cap (B \cup C) = (A\cap B) \cup (A\cap C)\\
+\text{Sei} ~x \in A \cap (B \cup C). \\
+\Leftrightarrow x \in A \wedge (x \in B \vee x \in C) \\
+\Leftrightarrow x \in A \cap B \vee x \in A \cap C \\
+\Leftrightarrow (x \in A \wedge x \in B) \vee (x \in A \wedge x \in C) \\
+\Leftrightarrow x \in (A \cap B) \cup (A \cap C) \\
+\text{Daraus folgt, dass}~ A \cap (B \cup C) \subseteq (A \cap B) \cup (A \cap C). \\
+\text{Sei}~y \in (A \cap B) \cup (A \cap C). \\
+\Leftrightarrow y \in (A \cap B) \vee y \in (A \cap C) \\
+\Leftrightarrow y \in A \wedge (y \in B \vee y \in C) \\
+\Leftrightarrow y \in A \wedge  y \in (B \cup C) \\
+\Leftrightarrow y \in A \cap (B \cup C) \\
+\text{Daraus folgt, dass}~ (A \cap B) \cup (A \cap C) \subseteq A \cap (B \cup C) \\
+A \cap (B \cup C) \subseteq (A \cap B) \cup (A \cap C) \wedge (A \cap B) \cup (A \cap C) \subseteq A \cap (B \cup C) \\ \Leftrightarrow A \cap (B \cup C) = (A \cap B) \cup (A \cap C).\\
+\)
+
+
+\item 
+\(
+\text{Z.z.}~A \cup (B \cap C) = (A\cup B) \cap (A\cup C)\\
+\text{Sei} ~ x \in A ~ \text{, dann gilt:}  \\
+x \in A\cup (B \cap C) \\
+\Leftrightarrow x \in (A \cup B)~ \wedge ~ x \in (A \cup C) \\
+\Leftrightarrow x \in (A \cup B) \cap (A \cup C) \\
+\text{Sei} ~ y \in (B \cap C) ~ \text{, dann gilt}: \\
+\Leftrightarrow y \in B ~ \wedge ~ y \in C \\
+\Leftrightarrow y \in (A \cup B) ~ \wedge ~ y \in (A \cup C) \\
+\Leftrightarrow y \in A \cup (B \cap C) ~\wedge ~ y \in (A \cup B) \cap (A \cup C) \\
+\text{Wenn wir ein beliebges Element x in eine der Mengen} ~A, B ~\text{und} ~ C ~\text{einfügen, ist dieses} \\
+\text{Element}~ x ~\text{auf beiden Seiten der Gleichung wiederzufinden.} \\
+\text{Da jedes Element aus}~ A \cup(B \cap C) ~\text{in} ~ (A \cup B) \cap (A \cup C) ~\text{ist} \\
+\text{und jedes Element aus}~ (A \cup B) \cap (A \cup C) ~\text{in} ~ A \cup (B \cap C), \\
+\text{kann man sagen, dass} ~ A \cup (B \cap C) = (A \cup B) \cap (A \cup C). \\
+\)
+
+\end{enumerate} 
 \end{lsg} 
 
 \bigskip

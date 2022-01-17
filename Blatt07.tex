@@ -56,6 +56,96 @@ $\limsup\limits_{n \to \infty} x_n = \sup\{S_n|n\in\mathbb{N}\}=(7+e)$\\
 $\liminf\limits_{n \to \infty} x_n = \inf\{I_n|n\in\mathbb{N}\}=(-7-e)$
 \end{lsg}
 
+
+\bigskip 
+
+\begin{lsg}[Tim Rust, Johanna Constien (zweite Variante)]
+
+$\lfloor \frac{n}{2}\rfloor$ ist die Gaußklammer. Sie bewirkt dass immer zur 
+nächst kleineren, ganzen Zahl abgerundet wird z.B. $3,9 \rightarrow 3$.\\
+
+Def.: a ist ein H\"aufungspunkt, falls eine Teilfolge $(a_{n_k})_{k\in\N} 
+\xrightarrow[k \rightarrow \infty]{} a$.\\
+
+Durch Ausprobieren sind wir auf vier Teilfolgen gekommen, die alle Zahlen der 
+Folge abdeckt.\\
+
+1. Teilfolge:\\
+\[
+\begin{aligned}
+(a_{4k})_{k\in\N}
+&=(-1)^{\lfloor \frac{4k}{2}\rfloor} \left( 7 + 
+(-1)^{4k}\left(1+\frac{1}{4k}\right)^{4k+1} \right)\\
+&=7+\left(1+\frac{1}{4k}\right)^{4k+1}\\
+\\
+&\lim \limits_{k \to \infty} 7+\left(1+\frac{1}{4k}\right)^{4k+1}\\
+&=\lim \limits_{k \to \infty} 7 + \lim \limits_{k \to 
+\infty}\left(1+\frac{1}{4k}\right)^{4k+1}\\
+&=7+e
+\end{aligned}
+\]\\
+
+2. Teilfolge:\\
+\[
+\begin{aligned}
+(a_{4k+1})_{k\in\N}
+&=(-1)^{\lfloor \frac{4k+1}{2}\rfloor} \left( 7 + 
+(-1)^{4k+1}\left(1+\frac{1}{4k+1}\right)^{4k+1+1} \right)\\
+&=7+(-1)\left(1+\frac{1}{4k+1}\right)^{4k+2}\\
+&=7-\left(1+\frac{1}{4k+1}\right)^{4k+2}\\
+\\
+&\lim \limits_{k \to \infty} 7-\left(1+\frac{1}{4k+1}\right)^{4k+2}\\
+&=\lim \limits_{k \to \infty} 7 - \lim \limits_{k \to 
+\infty}\left(1+\frac{1}{4k+1}\right)^{4k+2}\\
+&=7-e
+\end{aligned}
+\]
+\\
+3. Teilfolge:\\
+\[
+\begin{aligned}
+(a_{4k-1})_{k\in\N}
+&=(-1)^{\lfloor \frac{4k-1}{2}\rfloor} \left( 7 + 
+(-1)^{4k-1}\left(1+\frac{1}{4k-1}\right)^{4k+1-1} \right)\\
+&=-\left(7-\left(1+\frac{1}{4k-1}\right)^{4k}\right)\\
+\\
+&\lim \limits_{k \to \infty} 
+-\left(7-\left(1+\frac{1}{4k-1}\right)^{4k}\right)\\
+&=\lim \limits_{k \to \infty} -7+ \lim \limits_{k \to 
+\infty}\left(1+\frac{1}{4k-1}\right)^{4k}\\
+&=-7+e
+\end{aligned}
+\]\\
+4. Teilfolge:\\
+\[
+\begin{aligned}
+(a_{4k-2})_{k\in\N}
+&=(-1)^{\lfloor \frac{4k-2}{2}\rfloor} \left( 7 + 
+(-1)^{4k-2}\left(1+\frac{1}{4k-2}\right)^{4k+1-2} \right)\\
+&=-\left(7+\left(1+\frac{1}{4k-2}\right)^{4k-1}\right)\\
+\\
+&\lim \limits_{k \to \infty} 
+-\left(7+\left(1+\frac{1}{4k-2}\right)^{4k-1}\right)\\
+&=\lim \limits_{k \to \infty} -7- \lim \limits_{k \to 
+\infty}\left(1+\frac{1}{4k-2}\right)^{4k-1}\\
+&=-7-e
+\end{aligned}
+\]\\
+
+Die H\"aufungswerte der Folge~$(x_n)_{n\in\N}$ sind $-7-e$, $e-7$, $7-e$ und 
+$7+e$.\\
+
+Der $\limsup x_n$ ist der gr\"oßte H\"aufungswerte: 
+\[
+\limsup x_n= 7+e
+\]\\
+Der $\liminf x_n$ ist der kleinste H\"aufungswerte: 
+\[
+\liminf x_n=-7-e
+\]\\
+\end{lsg}
+
+
 \bigskip
 
 \begin{aufg}[6 Punkte]

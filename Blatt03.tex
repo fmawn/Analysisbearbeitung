@@ -12,10 +12,28 @@ Seien $a,b\in Z$. Beweisen Sie:
 
 \bigskip
 
-\begin{lsg}\mbox{ }
-\begin{enumerate}[label=$\mathrm{(\roman*)}$, ref=$\mathrm{\roman*}$]
-\item 
-\item 
+\begin{lsg}[Antonia Gabler und Michelle Musiol]\mbox{ }
+Aufgabe 3.1 \\
+Seien \(a,b \in Z\).
+\begin{enumerate}[i)]
+	\item z.Z.: ist \(0<a<b\), dann ist \(0<\frac{1}{b}<\frac{1}{a}\). \\
+		Aus der Voraussetzung \(0<a<b\) folgt, dass  \(0<a\) und \(0<b\) ist. Nach 2.27(iii) gilt: \[0<a\implies 0<\frac{1}{a} \text{ und damit auch } 0<b\implies 0<\frac{1}{b}.\]
+		Also ist \(0<\frac{1}{a}\) und \(0<\frac{1}{b}\). Es bleibt zu zeigen, dass, wenn \(a<b\), dann \(\frac{1}{b}<\frac{1}{a}\). \\
+		Es gilt: 
+		\begin{align} a<b &\overset{\cdot \frac{1}{b}}{\iff} a \cdot \frac{1}{b} < b \cdot \frac{1}{b} = 1 = a \cdot \frac{1}{a} < b \cdot \frac{1}{a} \notag \\ &\iff a \cdot \frac{1}{b} < 1 < b \cdot \frac{1}{a} \notag \end{align}
+		Wir betrachten \(a \cdot \frac{1}{b} < 1 \) und erhalten: \begin{align} a \cdot \frac{1}{b} < 1 &\overset{\cdot \frac{1}{a}}{\iff} \frac{a}{a} \cdot \frac{1}{b}<\frac{1}{a} \notag \\ &\iff \frac{1}{b}<\frac{1}{a}. \notag \end{align}
+		Analog können wir auch \(1 < b \cdot \frac{1}{a}\) betrachten: \[1 < b \cdot \frac{1}{a} \overset{\cdot \frac{1}{b}}{\iff} \frac{1}{b} < \frac{b}{b}\cdot\frac{1}{a} \iff \frac{1}{b}<\frac{1}{a}.\]
+		Da für \(0<a<b\) gilt: \(0<\frac{1}{a}\) und \(0<\frac{1}{b}\) und \(\frac{1}{b}<\frac{1}{a}\), folgt  \(0<\frac{1}{b}<\frac{1}{a}\). \(\hfill \square\)
+	\item z.Z.: \(|ab|=|a|\cdot |b|\). Wir führen eine Fallunterscheidung durch: \\
+		\(\underline{Fall 1: a\geq 0, b\geq 0:}\) \quad \(|a\cdot b| = a \cdot b = |a|\cdot |b|\) \\
+		\(\underline{Fall 2: a\geq 0, b< 0:}\) \quad \(|a\cdot b| = a \cdot (-b) = |a|\cdot |-b|\ \overset{\text{2.30(i)}}{=} |a|\cdot |b|\) \\
+		\(\underline{Fall 3: a< 0, b\geq 0:}\) \quad \(|a\cdot b| = (-a) \cdot b = |-a|\cdot |b|\ \overset{\text{2.30(i)}}{=} |a|\cdot |b|\) \\
+		\(\underline{Fall 4: a< 0, b< 0:}\) \quad \(|a\cdot b| = (-a) \cdot (-b) = |-a|\cdot |-b|\ \overset{\text{2.30(i)}}{=} |a|\cdot |b|\) \(\hfill \square\) \\
+	\item z.Z.: \(|\frac{a}{b}|=\frac{|a|}{|b|}\). Wir führen eine Fallunterscheidung durch, wobei gelten muss, dass \(b\neq0\). \\
+		\(\underline{Fall 1: a\geq 0, b> 0:}\) \quad \(|\frac{a}{b}|=\frac{a}{b}=\frac{|a|}{|b|}\). \\
+		\(\underline{Fall 1: a\geq 0, b< 0:}\) \quad \(|\frac{a}{b}|=\frac{a}{(-b)}=\frac{|a|}{|-b|}\overset{\text{2.30(i)}}{=} \frac{|a|}{|b|}\). \\
+		\(\underline{Fall 1: a< 0, b> 0:}\) \quad \(|\frac{a}{b}|=\frac{(-a)}{b}=\frac{|-a|}{|b|}\overset{\text{2.30(i)}}{=} \frac{|a|}{|b|}\). \\
+		\(\underline{Fall 1: a< 0, b< 0:}\) \quad \(|\frac{a}{b}|=\frac{(-a)}{(-b)}=\frac{|-a|}{|-b|}\overset{\text{2.30(i)}}{=} \frac{|a|}{|b|}\). \(\hfill \square\) \\
 \end{enumerate}
 \end{lsg}
 

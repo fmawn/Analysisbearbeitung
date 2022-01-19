@@ -121,53 +121,77 @@ Z.z.:
  
  Um also zu zeigen, dass
  \begin{align*}
-  \forall \e >0: (\exists \D>0: (\forall x \in \textrm{U}_\D(0):|\textrm{exp}(x)-\textrm{exp}(0)|<\e))
+  \forall \e >0: (\exists \delta>0: (\forall x \in 
+\textrm{U}_\delta(0):|\textrm{exp}(x)-\textrm{exp}(0)|<\e))
  \end{align*} gilt, halten wir zunächst fest, dass
  \begin{align*}
-  \textrm{exp}(0)= \sum_{k=0}^\infty \frac{0^k}{k!}=\frac{0^0}{0!}+ \sum_{k=1}^\infty 0 =1+0= 1
+  \textrm{exp}(0)= \sum_{k=0}^\infty \frac{0^k}{k!}=\frac{0^0}{0!}+ 
+\sum_{k=1}^\infty 0 =1+0= 1
  \end{align*}ist.
  
- Nun sei $\e$ eine beliebige aber feste positive reele Zahl. Wir setzen $\D=1-\frac{1}{\e+1}\in \R$, sodass $0<\D<1$
+ Nun sei $\e$ eine beliebige aber feste positive reele Zahl. Wir setzen 
+$\delta=1-\frac{1}{\e+1}\in \R$, sodass $0<\delta<1$
  gilt.
  
- Nun zeigen wir, dass für alle $x\in \textrm{U}_\D(0)$, die größer als $0$ sind,
+ Nun zeigen wir, dass für alle $x\in \textrm{U}_\delta(0)$, die größer als $0$ 
+sind,
  $|\textrm{exp}(x)-\textrm{exp}(0)|<\e$ gilt.
  
- Dafür stellen wir zunächst fest, dass für solche $x$ gerade $\textrm{exp}(x)>1$ gilt, den mit der gegebenen Definition der Exponentialfunktion ergibt sich rechnerisch mit weiterhin $x>0$ gerade
+ Dafür stellen wir zunächst fest, dass für solche $x$ gerade $\textrm{exp}(x)>1$ 
+gilt, den mit der gegebenen Definition der Exponentialfunktion ergibt sich 
+rechnerisch mit weiterhin $x>0$ gerade
  \begin{align*}
-  \textrm{exp}(x)= \sum_{k=0}^\infty \frac{x^k}{k!}= \sum_{k=0}^0 \frac{x^k}{k!}+ \sum_{k=1}^\infty \frac{x^k}{k!}= \frac{x^0}{0!}+\sum_{k=1}^\infty \frac{x^k}{k!}= 1+\underbrace{\sum_{k=1}^\infty \frac{x^k}{k!}}_{\textrm{stets positiv, da stets}\; x>0 \; \textrm{und}\; k>0 }>1,
+  \textrm{exp}(x)= \sum_{k=0}^\infty \frac{x^k}{k!}= \sum_{k=0}^0 
+\frac{x^k}{k!}+ \sum_{k=1}^\infty \frac{x^k}{k!}= 
+\frac{x^0}{0!}+\sum_{k=1}^\infty \frac{x^k}{k!}= 1+\underbrace{\sum_{k=1}^\infty 
+\frac{x^k}{k!}}_{\textrm{stets positiv, da stets}\; x>0 \; \textrm{und}\; k>0 
+}>1,
  \end{align*} sodass für diese $x$ gerade
  \begin{align*}
   \textrm{exp}(x)-1>0
  \end{align*}
  und folglich\begin{align*}
-  |\textrm{exp}(x)-\textrm{exp}(0)|= |\textrm{exp}(x)-1|<\e \Leftrightarrow \textrm{exp}(x)-1<\e
+  |\textrm{exp}(x)-\textrm{exp}(0)|= |\textrm{exp}(x)-1|<\e \Leftrightarrow 
+\textrm{exp}(x)-1<\e
  \end{align*} gilt, sodass für uns der Beweis der letzteren Aussage ausreicht.
  
-Für den Beweis der besagten Aussage nutzen wir aus, dass da weiterhin die betrachteten $x>0$ in der $\D-$Umgebung von $0$ sind,also  mit den bisherigen Ausführungen
+Für den Beweis der besagten Aussage nutzen wir aus, dass da weiterhin die 
+betrachteten $x>0$ in der $\delta-$Umgebung von $0$ sind,also  mit den 
+bisherigen Ausführungen
 \begin{align*}
- 0<x<\D<1
-\end{align*} gilt, sodass wir mit dem Wissen über das Konvergenzverhalten der geometrischen Reihe gerade rechnerisch als wahre Aussage
+ 0<x<\delta<1
+\end{align*} gilt, sodass wir mit dem Wissen über das Konvergenzverhalten der 
+geometrischen Reihe gerade rechnerisch als wahre Aussage
 \begin{align*}
-  &\textrm{exp}(x)-1= \left(\sum_{k=0}^\infty \frac{x^k}{k!} \right)-1 \stackrel{\textrm{da} \; k \geq0}{<} \left(\sum_{k=0}^\infty x^k \right)-1 \stackrel{\textrm{da} \; 0< x< 1}{=} \frac{1}{1-x}-1\\ &\stackrel{\textrm{da} \; 0< x< \D< 1}{<} \frac{1}{1-\D} -1\stackrel{\textrm{nach Wahl von} \; \D}{=} \frac{1}{1-\left(1-\frac{1}{\e+1}\right)}-1 = \e
+  &\textrm{exp}(x)-1= \left(\sum_{k=0}^\infty \frac{x^k}{k!} \right)-1 
+\stackrel{\textrm{da} \; k \geq0}{<} \left(\sum_{k=0}^\infty x^k \right)-1 
+\stackrel{\textrm{da} \; 0< x< 1}{=} \frac{1}{1-x}-1\\ &\stackrel{\textrm{da} \; 
+0< x< \delta< 1}{<} \frac{1}{1-\delta} -1\stackrel{\textrm{nach Wahl von} \; 
+\delta}{=} \frac{1}{1-\left(1-\frac{1}{\e+1}\right)}-1 = \e
  \end{align*}
-erhalten, also mit der oben erwähnten Äquivalenz für alle $x>0$ in der $\D-$Umgebung von $0$ gerade
+erhalten, also mit der oben erwähnten Äquivalenz für alle $x>0$ in der 
+$\delta-$Umgebung von $0$ gerade
 \begin{align*}
   |\textrm{exp}(x)-\textrm{exp}(0)|<\e
  \end{align*}
 gilt.
 
-Dass für $x=0$ in der $\D-$Umgebung von $0$ gerade
+Dass für $x=0$ in der $\delta-$Umgebung von $0$ gerade
 \begin{align*}
   |\textrm{exp}(x)-\textrm{exp}(0)|<\e
  \end{align*}
-gilt, ist trivial, sodass wir nun noch für diesen Teil des Beweises der Stetigkeit der Exponentialfunktion nur noch zeigen müssen, dass für alle $x<0$ die in der $\D-$Umgebung von $0$ sind gerade
+gilt, ist trivial, sodass wir nun noch für diesen Teil des Beweises der 
+Stetigkeit der Exponentialfunktion nur noch zeigen müssen, dass für alle $x<0$ 
+die in der $\delta-$Umgebung von $0$ sind gerade
 \begin{align*}
   |\textrm{exp}(x)-\textrm{exp}(0)|<\e
  \end{align*}
 gilt.
 
-Dafür können wir zunächst festhalten, dass das jeweils additiv Inverse $-x$ solcher $x$ offentsichtlich auch in der $\D-$Umgebung von $0$ ist, und dabei größer als $0$ ist, sodass mit den bisherigen Ausführungen für alle $x<0$ die in der $\D-$Umgebung von $0$ sind gerade
+Dafür können wir zunächst festhalten, dass das jeweils additiv Inverse $-x$ 
+solcher $x$ offentsichtlich auch in der $\delta-$Umgebung von $0$ ist, und dabei 
+größer als $0$ ist, sodass mit den bisherigen Ausführungen für alle $x<0$ die in 
+der $\delta-$Umgebung von $0$ sind gerade
 \begin{align*}
   |\textrm{exp}(-x)-\textrm{exp}(0)|<\e
  \end{align*}
@@ -179,18 +203,29 @@ und
  
  Nun nutzen wir Lemma (i) aus, nach dem mit $\textrm{exp}(0)=1$ gerade
  \begin{align*}
-  \textrm{exp}(x) \cdot \textrm{exp}(-x)=\textrm{exp}(x+(-x))=\textrm{exp}(0)=1 \stackrel{\textrm{da} \; \textrm{exp}(-x) >1}{\Leftrightarrow} \textrm{exp}(x)= \frac{1}{\textrm{exp}(-x)}
- \end{align*}gilt, sodass wir für den Beweis, dass für die $x<0$ die in der $\D-$Umgebung von $0$ sind gerade
+  \textrm{exp}(x) \cdot \textrm{exp}(-x)=\textrm{exp}(x+(-x))=\textrm{exp}(0)=1 
+\stackrel{\textrm{da} \; \textrm{exp}(-x) >1}{\Leftrightarrow} \textrm{exp}(x)= 
+\frac{1}{\textrm{exp}(-x)}
+ \end{align*}gilt, sodass wir für den Beweis, dass für die $x<0$ die in der 
+$\delta-$Umgebung von $0$ sind gerade
 \begin{align*}
   |\textrm{exp}(x)-\textrm{exp}(0)|<\e
  \end{align*}
-gilt, $\textrm{exp}(x)$ durch $\frac{1}{\textrm{exp}(-x)}$ substituieren können, sodass wir für die $x<0$ die in der $\D-$Umgebung von $0$ sind rechnerisch mit \newline $\textrm{exp}(-x)>1 \Leftrightarrow 0<\frac{1}{\textrm{exp}(-x)} <1 $ und $|\textrm{exp}(-x)-\textrm{exp}(0)|=|\textrm{exp}(-x)-1|<\e$ gerade
+gilt, $\textrm{exp}(x)$ durch $\frac{1}{\textrm{exp}(-x)}$ substituieren können, 
+sodass wir für die $x<0$ die in der $\delta-$Umgebung von $0$ sind rechnerisch 
+mit \newline $\textrm{exp}(-x)>1 \Leftrightarrow 0<\frac{1}{\textrm{exp}(-x)} <1 
+$ und $|\textrm{exp}(-x)-\textrm{exp}(0)|=|\textrm{exp}(-x)-1|<\e$ gerade
 \begin{align*}
-  &|\textrm{exp}(x)-\textrm{exp}(0)|= \left|\frac{1}{\textrm{exp}(-x)}-1\right| = \left|\frac{1-\textrm{exp}(-x)}{\textrm{exp}(-x)} \right|\\&= \left|\frac{1}{\textrm{exp}(-x)} \right|\cdot\left|1-\textrm{exp}(-x) \right|= \left|\frac{1}{\textrm{exp}(-x)} \right|\cdot\left|\textrm{exp}(-x)-1 \right|<\e
+  &|\textrm{exp}(x)-\textrm{exp}(0)|= \left|\frac{1}{\textrm{exp}(-x)}-1\right| 
+= \left|\frac{1-\textrm{exp}(-x)}{\textrm{exp}(-x)} \right|\\&= 
+\left|\frac{1}{\textrm{exp}(-x)} \right|\cdot\left|1-\textrm{exp}(-x) \right|= 
+\left|\frac{1}{\textrm{exp}(-x)} \right|\cdot\left|\textrm{exp}(-x)-1 \right|<\e
  \end{align*}
 erhalten.
 
-Somit gilt für ein beliebiges aber festes positives reeles $\e$, und somit für alle reele $\e>0$, dass mit $\D=1-\frac{1}{\e+1}$ ein $\D$ existiert, mit dem für alle $x$ in der $\D-$ Umgebung von $0$ gerade
+Somit gilt für ein beliebiges aber festes positives reeles $\e$, und somit für 
+alle reele $\e>0$, dass mit $\delta=1-\frac{1}{\e+1}$ ein $\delta$ existiert, 
+mit dem für alle $x$ in der $\delta-$ Umgebung von $0$ gerade
 \begin{align*}
   |\textrm{exp}(x)-\textrm{exp}(0)|<\e
  \end{align*}
